@@ -63,7 +63,7 @@ export const SDK_METADATA = {
   language: "typescript",
   openapiDocVersion: "1.0",
   sdkVersion: "0.0.35",
-  genVersion: "2.844.3",
+  genVersion: "2.845.1",
   userAgent:
-    "speakeasy-sdk/mcp-typescript 0.0.35 2.844.3 1.0 @flexprice/mcp-server-temp",
+    "speakeasy-sdk/mcp-typescript 0.0.35 2.845.1 1.0 @omkar273/mcp-temp",
 } as const;
