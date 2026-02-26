@@ -43,6 +43,20 @@ import { tool$invoicesTriggerInvoiceCommsWebhook } from "./tools/invoicesTrigger
 import { tool$invoicesUpdateInvoice } from "./tools/invoicesUpdateInvoice.js";
 import { tool$invoicesUpdateInvoicePaymentStatus } from "./tools/invoicesUpdateInvoicePaymentStatus.js";
 import { tool$invoicesVoidInvoice } from "./tools/invoicesVoidInvoice.js";
+import { tool$plansCreatePlan } from "./tools/plansCreatePlan.js";
+import { tool$plansDeletePlan } from "./tools/plansDeletePlan.js";
+import { tool$plansGetPlan } from "./tools/plansGetPlan.js";
+import { tool$plansPostPlansIdClone } from "./tools/plansPostPlansIdClone.js";
+import { tool$plansQueryPlan } from "./tools/plansQueryPlan.js";
+import { tool$plansSyncPlanPrices } from "./tools/plansSyncPlanPrices.js";
+import { tool$plansUpdatePlan } from "./tools/plansUpdatePlan.js";
+import { tool$pricesCreatePrice } from "./tools/pricesCreatePrice.js";
+import { tool$pricesCreatePricesBulk } from "./tools/pricesCreatePricesBulk.js";
+import { tool$pricesDeletePrice } from "./tools/pricesDeletePrice.js";
+import { tool$pricesGetPrice } from "./tools/pricesGetPrice.js";
+import { tool$pricesGetPriceByLookupKey } from "./tools/pricesGetPriceByLookupKey.js";
+import { tool$pricesQueryPrice } from "./tools/pricesQueryPrice.js";
+import { tool$pricesUpdatePrice } from "./tools/pricesUpdatePrice.js";
 
 export function createMCPServer(deps: {
   logger: ConsoleLogger;
@@ -130,6 +144,20 @@ export function createMCPServer(deps: {
   tool(tool$eventsGetUsageStatistics);
   tool(tool$eventsGetUsageByMeter);
   tool(tool$eventsGetEvent);
+  tool(tool$plansCreatePlan);
+  tool(tool$plansQueryPlan);
+  tool(tool$plansGetPlan);
+  tool(tool$plansUpdatePlan);
+  tool(tool$plansDeletePlan);
+  tool(tool$plansPostPlansIdClone);
+  tool(tool$plansSyncPlanPrices);
+  tool(tool$pricesCreatePrice);
+  tool(tool$pricesCreatePricesBulk);
+  tool(tool$pricesGetPriceByLookupKey);
+  tool(tool$pricesQueryPrice);
+  tool(tool$pricesGetPrice);
+  tool(tool$pricesUpdatePrice);
+  tool(tool$pricesDeletePrice);
 
   if (deps.dynamic) {
     registerDynamicTools(deps.logger, server, getClient, toolMap, scopes);
