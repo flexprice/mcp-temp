@@ -17,10 +17,9 @@ export const tool$subscriptionsRemoveSubscriptionAddon: ToolDefinition<
   description: `Remove addon from subscription
 
 Use when removing an add-on from a subscription (e.g. downgrade or opt-out).`,
-  scopes: ["full", "default", "full"],
   annotations: {
     "title": "",
-    "destructiveHint": false,
+    "destructiveHint": true,
     "idempotentHint": false,
     "openWorldHint": false,
     "readOnlyHint": false,

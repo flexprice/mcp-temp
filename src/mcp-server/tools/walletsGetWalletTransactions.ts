@@ -15,13 +15,12 @@ export const tool$walletsGetWalletTransactions: ToolDefinition<typeof args> = {
   description: `Get wallet transactions
 
 Use when showing transaction history for a wallet (e.g. credit/debit log or audit). Returns a paginated list; supports limit, offset, and filters.`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": false,
+    "readOnlyHint": true,
   },
   args,
   tool: async (client, args, ctx) => {

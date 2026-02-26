@@ -15,13 +15,12 @@ export const tool$tasksDownloadTaskExport: ToolDefinition<typeof args> = {
   description: `Download task export file
 
 Use when letting a user download an exported file (e.g. report or data export). Returns a presigned URL; supports FlexPrice or customer-owned S3.`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": false,
+    "readOnlyHint": true,
   },
   args,
   tool: async (client, args, ctx) => {

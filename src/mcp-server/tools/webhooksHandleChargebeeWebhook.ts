@@ -16,7 +16,6 @@ export const tool$webhooksHandleChargebeeWebhook: ToolDefinition<typeof args> =
     description: `Handle Chargebee webhook events
 
 Use as the Chargebee webhook endpoint URL. Receives payment and subscription events from Chargebee to sync status into FlexPrice.`,
-    scopes: ["full"],
     annotations: {
       "title": "",
       "destructiveHint": false,

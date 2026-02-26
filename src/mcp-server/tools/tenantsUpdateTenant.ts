@@ -15,7 +15,6 @@ export const tool$tenantsUpdateTenant: ToolDefinition<typeof args> = {
   description: `Update a tenant
 
 Use when changing tenant details (e.g. name or billing info). Request body contains the fields to update.`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

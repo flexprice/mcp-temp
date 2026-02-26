@@ -17,13 +17,12 @@ export const tool$taxAssociationsGetTaxAssociation: ToolDefinition<
   description: `Get Tax Association
 
 Use when you need to load a single tax association (e.g. for display or editing).`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": false,
+    "readOnlyHint": true,
   },
   args,
   tool: async (client, args, ctx) => {

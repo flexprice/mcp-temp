@@ -15,10 +15,9 @@ export const tool$entitlementsDeleteEntitlement: ToolDefinition<typeof args> = {
   description: `Delete entitlement
 
 Use when removing a feature from a plan or addon (e.g. deprecating a capability). Returns 200 with success message.`,
-  scopes: ["full"],
   annotations: {
     "title": "",
-    "destructiveHint": false,
+    "destructiveHint": true,
     "idempotentHint": false,
     "openWorldHint": false,
     "readOnlyHint": false,

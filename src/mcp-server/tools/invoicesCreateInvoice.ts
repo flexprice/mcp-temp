@@ -15,7 +15,6 @@ export const tool$invoicesCreateInvoice: ToolDefinition<typeof args> = {
   description: `Create one-off invoice
 
 Use when creating a manual or one-off invoice (e.g. custom charge or non-recurring billing). Invoice is created in draft; finalize when ready.`,
-  scopes: ["full", "default", "full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

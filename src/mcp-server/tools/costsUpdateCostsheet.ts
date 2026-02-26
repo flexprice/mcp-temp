@@ -15,7 +15,6 @@ export const tool$costsUpdateCostsheet: ToolDefinition<typeof args> = {
   description: `Update costsheet
 
 Use when changing costsheet name or metadata.`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

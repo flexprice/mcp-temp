@@ -15,7 +15,6 @@ export const tool$walletsCreateWallet: ToolDefinition<typeof args> = {
   description: `Create a new wallet
 
 Use when giving a customer a prepaid or credit balance (e.g. prepaid plans or promotional credits).`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

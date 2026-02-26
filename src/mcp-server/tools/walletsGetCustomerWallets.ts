@@ -15,13 +15,12 @@ export const tool$walletsGetCustomerWallets: ToolDefinition<typeof args> = {
   description: `Get Customer Wallets
 
 Use when resolving wallets by external customer id or lookup key (e.g. from your app's user id). Supports optional real-time balance and expand.`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": false,
+    "readOnlyHint": true,
   },
   args,
   tool: async (client, args, ctx) => {

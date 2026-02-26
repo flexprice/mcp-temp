@@ -15,7 +15,6 @@ export const tool$plansCreatePlan: ToolDefinition<typeof args> = {
   description: `Create plan
 
 Use when defining a new pricing plan (e.g. Free, Pro, Enterprise). Attach prices and entitlements; customers subscribe to plans.`,
-  scopes: ["full", "default", "full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

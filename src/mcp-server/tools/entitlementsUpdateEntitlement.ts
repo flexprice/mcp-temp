@@ -15,7 +15,6 @@ export const tool$entitlementsUpdateEntitlement: ToolDefinition<typeof args> = {
   description: `Update entitlement
 
 Use when changing an entitlement (e.g. increasing or decreasing a limit). Request body contains the fields to update.`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

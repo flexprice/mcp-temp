@@ -15,13 +15,12 @@ export const tool$tasksGetTaskResult: ToolDefinition<typeof args> = {
   description: `Get task processing result
 
 Use when fetching the outcome of a completed task (e.g. export URL or error message). Call after task status is complete.`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": false,
+    "readOnlyHint": true,
   },
   args,
   tool: async (client, args, ctx) => {

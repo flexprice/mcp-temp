@@ -15,13 +15,12 @@ export const tool$groupsGetGroup: ToolDefinition<typeof args> = {
   description: `Get group
 
 Use when you need to load a single group (e.g. for display or to assign entities).`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": false,
+    "readOnlyHint": true,
   },
   args,
   tool: async (client, args, ctx) => {

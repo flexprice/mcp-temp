@@ -15,7 +15,6 @@ export const tool$plansSyncPlanPrices: ToolDefinition<typeof args> = {
   description: `Synchronize plan prices
 
 Use when you have changed plan prices and need to push them to all active subscriptions (e.g. global price update). Returns workflow ID.`,
-  scopes: ["full", "default", "full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

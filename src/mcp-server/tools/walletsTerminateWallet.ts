@@ -15,7 +15,6 @@ export const tool$walletsTerminateWallet: ToolDefinition<typeof args> = {
   description: `Terminate a wallet
 
 Use when closing a customer wallet (e.g. churn or migration). Closes the wallet and applies remaining balance per policy (refund or forfeit).`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

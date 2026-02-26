@@ -15,13 +15,12 @@ export const tool$addonsGetAddon: ToolDefinition<typeof args> = {
   description: `Get addon
 
 Use when you need to load a single addon (e.g. for display or to attach to a subscription).`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": false,
+    "readOnlyHint": true,
   },
   args,
   tool: async (client, args, ctx) => {

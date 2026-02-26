@@ -17,13 +17,12 @@ export const tool$subscriptionsListAllSubscriptionSchedules: ToolDefinition<
   description: `List all subscription schedules
 
 Use when listing or searching scheduled changes across subscriptions (e.g. admin view). Returns schedules with optional filtering.`,
-  scopes: ["full", "default", "full"],
   annotations: {
     "title": "",
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": false,
+    "readOnlyHint": true,
   },
   args,
   tool: async (client, args, ctx) => {

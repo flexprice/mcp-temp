@@ -15,7 +15,6 @@ export const tool$secretsCreateApiKey: ToolDefinition<typeof args> = {
   description: `Create a new API key
 
 Use when issuing a new API key (e.g. for a service account or for the current user). Provide service_account_id to create for a service account.`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

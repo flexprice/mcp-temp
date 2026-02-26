@@ -15,7 +15,6 @@ export const tool$environmentsCreateEnvironment: ToolDefinition<typeof args> = {
   description: `Create environment
 
 Use when setting up a new environment (e.g. production, staging) for the tenant. Ideal for separating billing or config per environment.`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

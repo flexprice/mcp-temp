@@ -15,7 +15,6 @@ export const tool$taxRatesUpdateTaxRate: ToolDefinition<typeof args> = {
   description: `Update a tax rate
 
 Use when changing a tax rate (e.g. rate value or name). Request body contains the fields to update.`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

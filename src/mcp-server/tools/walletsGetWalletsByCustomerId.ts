@@ -15,13 +15,12 @@ export const tool$walletsGetWalletsByCustomerId: ToolDefinition<typeof args> = {
   description: `Get wallets by customer ID
 
 Use when showing a customer's wallets (e.g. balance overview by currency or in a billing portal). Supports optional expand for balance breakdown.`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": false,
+    "readOnlyHint": true,
   },
   args,
   tool: async (client, args, ctx) => {

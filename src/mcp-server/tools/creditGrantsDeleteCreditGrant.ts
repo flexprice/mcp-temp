@@ -15,10 +15,9 @@ export const tool$creditGrantsDeleteCreditGrant: ToolDefinition<typeof args> = {
   description: `Delete credit grant
 
 Use when removing or ending a credit grant (e.g. revoke promo or close prepaid). Plan-scoped grants are archived; subscription-scoped supports optional effective_date in body.`,
-  scopes: ["full"],
   annotations: {
     "title": "",
-    "destructiveHint": false,
+    "destructiveHint": true,
     "idempotentHint": false,
     "openWorldHint": false,
     "readOnlyHint": false,

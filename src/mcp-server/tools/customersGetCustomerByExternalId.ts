@@ -17,13 +17,12 @@ export const tool$customersGetCustomerByExternalId: ToolDefinition<
   description: `Get customer by external ID
 
 Use when resolving a customer by your app's id (e.g. from your user table). Ideal for integrations that key by external id.`,
-  scopes: ["full", "default", "full"],
   annotations: {
     "title": "",
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": false,
+    "readOnlyHint": true,
   },
   args,
   tool: async (client, args, ctx) => {

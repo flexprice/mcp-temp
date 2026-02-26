@@ -17,7 +17,6 @@ export const tool$subscriptionsCreateSubscriptionLineItem: ToolDefinition<
   description: `Create subscription line item
 
 Use when adding a new charge or seat to a subscription (e.g. extra seat or one-time add). Supports price_id or inline price.`,
-  scopes: ["full", "default", "full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

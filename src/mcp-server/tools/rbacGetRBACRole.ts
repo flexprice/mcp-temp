@@ -15,13 +15,12 @@ export const tool$rbacGetRBACRole: ToolDefinition<typeof args> = {
   description: `Get a specific RBAC role
 
 Use when you need to show or edit a single role (e.g. role detail page). Includes permissions, name, and description.`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": false,
+    "readOnlyHint": true,
   },
   args,
   tool: async (client, args, ctx) => {

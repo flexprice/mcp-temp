@@ -15,7 +15,6 @@ export const tool$plansPostPlansIdClone: ToolDefinition<typeof args> = {
   description: `Clone a plan
 
 Clone an existing plan, copying its active prices, published entitlements, and published credit grants`,
-  scopes: ["full", "default", "full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

@@ -17,7 +17,6 @@ export const tool$taxAssociationsUpdateTaxAssociation: ToolDefinition<
   description: `Update tax association
 
 Use when changing a tax association (e.g. switch rate or entity). Request body contains the fields to update.`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

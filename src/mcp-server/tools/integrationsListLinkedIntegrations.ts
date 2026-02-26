@@ -10,13 +10,12 @@ export const tool$integrationsListLinkedIntegrations: ToolDefinition = {
   description: `List linked integrations
 
 Use when showing which integrations are connected (e.g. settings page). Returns providers that have valid linked credentials.`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": false,
+    "readOnlyHint": true,
   },
   tool: async (client, ctx) => {
     const [result] = await integrationsListLinkedIntegrations(

@@ -15,7 +15,6 @@ export const tool$walletsQueryWallet: ToolDefinition<typeof args> = {
   description: `Query wallets
 
 Use when listing or searching wallets (e.g. admin view or reporting). Returns a paginated list; supports filtering by customer and status.`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

@@ -16,13 +16,12 @@ export const tool$creditGrantsGetPlanCreditGrants: ToolDefinition<typeof args> =
     description: `Get plan credit grants
 
 Use when listing credits attached to a plan (e.g. included prepaid or promo credits).`,
-    scopes: ["full"],
     annotations: {
       "title": "",
       "destructiveHint": false,
       "idempotentHint": false,
       "openWorldHint": false,
-      "readOnlyHint": false,
+      "readOnlyHint": true,
     },
     args,
     tool: async (client, args, ctx) => {

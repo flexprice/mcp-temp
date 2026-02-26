@@ -15,7 +15,6 @@ export const tool$featuresUpdateFeature: ToolDefinition<typeof args> = {
   description: `Update feature
 
 Use when changing feature definition (e.g. name, type, or meter). Request body contains the fields to update.`,
-  scopes: ["full", "default", "full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

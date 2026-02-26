@@ -15,7 +15,6 @@ export const tool$addonsUpdateAddon: ToolDefinition<typeof args> = {
   description: `Update addon
 
 Use when changing addon details (e.g. name, pricing, or metadata).`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

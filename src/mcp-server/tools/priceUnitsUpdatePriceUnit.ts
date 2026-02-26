@@ -15,7 +15,6 @@ export const tool$priceUnitsUpdatePriceUnit: ToolDefinition<typeof args> = {
   description: `Update price unit
 
 Use when renaming or updating metadata for a price unit. Code is immutable once created.`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

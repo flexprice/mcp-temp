@@ -15,10 +15,9 @@ export const tool$plansDeletePlan: ToolDefinition<typeof args> = {
   description: `Delete plan
 
 Use when retiring a plan (e.g. end-of-life). Existing subscriptions may be affected. Returns 200 with success message.`,
-  scopes: ["full", "default", "full"],
   annotations: {
     "title": "",
-    "destructiveHint": false,
+    "destructiveHint": true,
     "idempotentHint": false,
     "openWorldHint": false,
     "readOnlyHint": false,

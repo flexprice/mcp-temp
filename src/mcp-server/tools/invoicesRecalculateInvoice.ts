@@ -15,7 +15,6 @@ export const tool$invoicesRecalculateInvoice: ToolDefinition<typeof args> = {
   description: `Recalculate invoice
 
 Use when subscription or usage data changed and you need to refresh a draft invoice before finalizing. Optional finalize=true to lock after recalc.`,
-  scopes: ["full", "default", "full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

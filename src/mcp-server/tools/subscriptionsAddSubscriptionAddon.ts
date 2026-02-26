@@ -17,7 +17,6 @@ export const tool$subscriptionsAddSubscriptionAddon: ToolDefinition<
   description: `Add addon to subscription
 
 Use when adding an optional product or add-on to an existing subscription (e.g. extra storage or support tier).`,
-  scopes: ["full", "default", "full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

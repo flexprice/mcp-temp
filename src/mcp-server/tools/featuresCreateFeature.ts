@@ -15,7 +15,6 @@ export const tool$featuresCreateFeature: ToolDefinition<typeof args> = {
   description: `Create feature
 
 Use when defining a new feature or capability to gate or meter (e.g. feature flags or usage-based limits). Ideal for boolean or usage features.`,
-  scopes: ["full", "default", "full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

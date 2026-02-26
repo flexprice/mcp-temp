@@ -17,7 +17,6 @@ export const tool$invoicesTriggerInvoiceCommsWebhook: ToolDefinition<
   description: `Trigger invoice communication webhook
 
 Use when sending an invoice to the customer (e.g. trigger email or Slack). Payload includes full invoice details for your integration.`,
-  scopes: ["full", "default", "full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

@@ -15,10 +15,9 @@ export const tool$addonsDeleteAddon: ToolDefinition<typeof args> = {
   description: `Delete addon
 
 Use when retiring an addon (e.g. end-of-life). Returns 200 with success message.`,
-  scopes: ["full"],
   annotations: {
     "title": "",
-    "destructiveHint": false,
+    "destructiveHint": true,
     "idempotentHint": false,
     "openWorldHint": false,
     "readOnlyHint": false,

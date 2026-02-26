@@ -15,7 +15,6 @@ export const tool$addonsQueryAddon: ToolDefinition<typeof args> = {
   description: `Query addons
 
 Use when listing or searching addons (e.g. catalog or subscription builder). Returns a paginated list; supports filtering and sorting.`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

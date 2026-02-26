@@ -10,13 +10,12 @@ export const tool$usersGetUserInfo: ToolDefinition = {
   description: `Get current user
 
 Use to show the logged-in user's profile in the UI or to check permissions and roles for the current session.`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": false,
+    "readOnlyHint": true,
   },
   tool: async (client, ctx) => {
     const [result] = await usersGetUserInfo(

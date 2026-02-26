@@ -15,7 +15,6 @@ export const tool$invoicesAttemptInvoicePayment: ToolDefinition<typeof args> = {
   description: `Attempt invoice payment
 
 Use when paying an invoice with the customer's wallet balance (e.g. prepaid credits or balance applied at checkout).`,
-  scopes: ["full", "default", "full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

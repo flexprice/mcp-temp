@@ -15,7 +15,6 @@ export const tool$usersCreateUser: ToolDefinition<typeof args> = {
   description: `Create service account
 
 Use when provisioning API access for automation, CI/CD pipelines, or headless integrations that need scoped API keys.`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

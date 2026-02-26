@@ -17,13 +17,12 @@ export const tool$subscriptionsListSubscriptionPauses: ToolDefinition<
   description: `List all pauses for a subscription
 
 Use when showing pause history for a subscription (e.g. support or audit). Returns all past and future pauses.`,
-  scopes: ["full", "default", "full"],
   annotations: {
     "title": "",
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": false,
+    "readOnlyHint": true,
   },
   args,
   tool: async (client, args, ctx) => {

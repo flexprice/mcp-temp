@@ -16,7 +16,6 @@ export const tool$subscriptionsPauseSubscription: ToolDefinition<typeof args> =
     description: `Pause a subscription
 
 Use when temporarily stopping a subscription (e.g. customer hold or seasonal pause). Billing and access pause; resume when ready.`,
-    scopes: ["full", "default", "full"],
     annotations: {
       "title": "",
       "destructiveHint": false,

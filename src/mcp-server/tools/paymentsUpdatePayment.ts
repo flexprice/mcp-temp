@@ -15,7 +15,6 @@ export const tool$paymentsUpdatePayment: ToolDefinition<typeof args> = {
   description: `Update payment
 
 Use when updating payment status or metadata (e.g. after reconciliation or adding a reference).`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

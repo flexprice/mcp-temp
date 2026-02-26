@@ -10,13 +10,12 @@ export const tool$costsGetActiveCostsheet: ToolDefinition = {
   description: `Get active costsheet
 
 Use when you need the tenant's default pricing configuration (e.g. for checkout or plan display). Returns the active costsheet for the environment.`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": false,
+    "readOnlyHint": true,
   },
   tool: async (client, ctx) => {
     const [result] = await costsGetActiveCostsheet(

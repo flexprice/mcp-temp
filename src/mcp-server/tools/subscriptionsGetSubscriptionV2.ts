@@ -16,13 +16,12 @@ export const tool$subscriptionsGetSubscriptionV2: ToolDefinition<typeof args> =
     description: `Get subscription (V2)
 
 Use when you need a subscription with related data (line items, prices, plan). Supports expand for detailed payloads without extra round-trips.`,
-    scopes: ["full", "default", "full"],
     annotations: {
       "title": "",
       "destructiveHint": false,
       "idempotentHint": false,
       "openWorldHint": false,
-      "readOnlyHint": false,
+      "readOnlyHint": true,
     },
     args,
     tool: async (client, args, ctx) => {

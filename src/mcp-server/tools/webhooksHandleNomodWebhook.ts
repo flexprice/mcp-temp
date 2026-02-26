@@ -15,7 +15,6 @@ export const tool$webhooksHandleNomodWebhook: ToolDefinition<typeof args> = {
   description: `Handle Nomod webhook events
 
 Use as the Nomod webhook endpoint URL. Receives payment and invoice events from Nomod to keep FlexPrice in sync.`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

@@ -17,13 +17,12 @@ export const tool$subscriptionsGetSubscriptionUpcomingGrants: ToolDefinition<
   description: `Get upcoming credit grant applications
 
 Use when showing upcoming or pending credits for a subscription (e.g. in a portal or for forecasting).`,
-  scopes: ["full", "default", "full"],
   annotations: {
     "title": "",
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": false,
+    "readOnlyHint": true,
   },
   args,
   tool: async (client, args, ctx) => {

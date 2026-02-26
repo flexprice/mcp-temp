@@ -15,10 +15,9 @@ export const tool$pricesDeletePrice: ToolDefinition<typeof args> = {
   description: `Delete price
 
 Use when retiring a price (e.g. end-of-life or replacement). Optional effective date or cascade for subscriptions.`,
-  scopes: ["full"],
   annotations: {
     "title": "",
-    "destructiveHint": false,
+    "destructiveHint": true,
     "idempotentHint": false,
     "openWorldHint": false,
     "readOnlyHint": false,

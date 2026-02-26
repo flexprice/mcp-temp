@@ -15,10 +15,9 @@ export const tool$groupsDeleteGroup: ToolDefinition<typeof args> = {
   description: `Delete group
 
 Use when removing a group and clearing its entity associations (e.g. retiring a product line). Returns 204 or 200 on success.`,
-  scopes: ["full"],
   annotations: {
     "title": "",
-    "destructiveHint": false,
+    "destructiveHint": true,
     "idempotentHint": false,
     "openWorldHint": false,
     "readOnlyHint": false,

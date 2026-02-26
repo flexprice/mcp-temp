@@ -15,7 +15,6 @@ export const tool$eventsGetUsageByMeter: ToolDefinition<typeof args> = {
   description: `Get usage by meter
 
 Use when showing usage for a specific meter (e.g. dashboard or overage check). Supports time range, filters, and grouping by customer or subscription.`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

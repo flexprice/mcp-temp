@@ -15,7 +15,6 @@ export const tool$couponsUpdateCoupon: ToolDefinition<typeof args> = {
   description: `Update coupon
 
 Use when changing coupon config (e.g. value, validity, or usage limits).`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

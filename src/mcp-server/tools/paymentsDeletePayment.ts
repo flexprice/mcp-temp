@@ -15,10 +15,9 @@ export const tool$paymentsDeletePayment: ToolDefinition<typeof args> = {
   description: `Delete payment
 
 Use when removing or voiding a payment record (e.g. correcting erroneous entries). Returns 200 with success message.`,
-  scopes: ["full"],
   annotations: {
     "title": "",
-    "destructiveHint": false,
+    "destructiveHint": true,
     "idempotentHint": false,
     "openWorldHint": false,
     "readOnlyHint": false,

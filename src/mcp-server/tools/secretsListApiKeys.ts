@@ -15,13 +15,12 @@ export const tool$secretsListApiKeys: ToolDefinition<typeof args> = {
   description: `List API keys
 
 Use when listing API keys (e.g. admin view or rotating keys). Returns a paginated list.`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": false,
+    "readOnlyHint": true,
   },
   args,
   tool: async (client, args, ctx) => {

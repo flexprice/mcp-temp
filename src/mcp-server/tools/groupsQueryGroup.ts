@@ -15,7 +15,6 @@ export const tool$groupsQueryGroup: ToolDefinition<typeof args> = {
   description: `Query groups
 
 Use when listing or searching groups (e.g. admin catalog). Returns a paginated list; supports filtering and sorting.`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

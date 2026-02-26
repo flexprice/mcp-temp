@@ -16,7 +16,6 @@ export const tool$webhooksHandleQuickbooksWebhook: ToolDefinition<typeof args> =
     description: `Handle QuickBooks webhook events
 
 Use as the QuickBooks webhook endpoint URL. Receives payment events from QuickBooks to sync payment status into FlexPrice.`,
-    scopes: ["full"],
     annotations: {
       "title": "",
       "destructiveHint": false,

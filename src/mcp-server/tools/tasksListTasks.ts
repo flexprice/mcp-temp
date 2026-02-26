@@ -15,13 +15,12 @@ export const tool$tasksListTasks: ToolDefinition<typeof args> = {
   description: `List tasks
 
 Use when listing or searching async tasks (e.g. admin queue view). Returns list with optional filtering.`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": false,
+    "readOnlyHint": true,
   },
   args,
   tool: async (client, args, ctx) => {

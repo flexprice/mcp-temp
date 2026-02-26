@@ -19,7 +19,7 @@ You can run the server in two ways: **npm package** (one command) or **local rep
 Install: `npm i @omkar273/mcp-temp`. Or run with one command (no clone or build):
 
 ```bash
-npx @omkar273/mcp-temp start --server-url https://api.cloud.flexprice.io/v1 --api-key-auth YOUR_API_KEY --scope default
+npx @omkar273/mcp-temp start --server-url https://api.cloud.flexprice.io/v1 --api-key-auth YOUR_API_KEY
 ```
 
 Replace `YOUR_API_KEY` with your FlexPrice API key. Next: [Add to your MCP client](#add-to-your-mcp-client).
@@ -79,9 +79,7 @@ Add the FlexPrice MCP server in your editor. Replace `YOUR_API_KEY` with your Fl
         "--server-url",
         "https://api.cloud.flexprice.io/v1",
         "--api-key-auth",
-        "YOUR_API_KEY",
-        "--scope",
-        "default"
+        "YOUR_API_KEY"
       ]
     }
   }
@@ -108,9 +106,7 @@ Add the FlexPrice MCP server in your editor. Replace `YOUR_API_KEY` with your Fl
         "--server-url",
         "https://api.cloud.flexprice.io/v1",
         "--api-key-auth",
-        "YOUR_API_KEY",
-        "--scope",
-        "default"
+        "YOUR_API_KEY"
       ]
     }
   }
@@ -122,7 +118,7 @@ Add the FlexPrice MCP server in your editor. Replace `YOUR_API_KEY` with your Fl
 ### Claude Code
 
 ```bash
-claude mcp add FlexPrice -- npx -y @omkar273/mcp-temp start --server-url https://api.cloud.flexprice.io/v1 --api-key-auth YOUR_API_KEY --scope default
+claude mcp add FlexPrice -- npx -y @omkar273/mcp-temp start --server-url https://api.cloud.flexprice.io/v1 --api-key-auth YOUR_API_KEY
 ```
 
 Then run `claude` and use `/mcp` to confirm the server is connected.
@@ -145,9 +141,7 @@ Add to your Claude Desktop config file (path in the table above):
         "--server-url",
         "https://api.cloud.flexprice.io/v1",
         "--api-key-auth",
-        "YOUR_API_KEY",
-        "--scope",
-        "default"
+        "YOUR_API_KEY"
       ]
     }
   }
@@ -167,7 +161,7 @@ Quit and reopen Claude Desktop.
   "mcpServers": {
     "flexprice": {
       "command": "node",
-      "args": ["/path/to/mcp-server/bin/mcp-server.js", "start", "--scope", "default"],
+      "args": ["/path/to/mcp-server/bin/mcp-server.js", "start"],
       "env": {
         "API_KEY_APIKEYAUTH": "your_api_key_here",
         "BASE_URL": "https://api.cloud.flexprice.io/v1"
@@ -200,21 +194,6 @@ After editing, save and **restart Cursor or quit and reopen Claude Desktop** so 
 
 The server exposes FlexPrice API operations as MCP tools. Tool names and parameters follow the OpenAPI spec. For the full list, see your MCP client’s tool list after connecting, or the OpenAPI spec (e.g. `docs/swagger/swagger-3-0.json`) in the repo.
 
-## Tool scopes (default vs all tools)
-
-By default the server exposes only a **curated set** of tools for: **Customers**, **Invoices**, **Subscriptions**, **Plans**, and **Features**. Start with `--scope default` to use this set (all examples below include it).
-
-To expose **all** API tools, use `--scope full` or the convenience flag `--all-tools` (if using the wrapper):
-
-- **Curated (default):** `--scope default` — only Customers, Invoices, Subscriptions, Plans, Features.
-- **All tools:** `--scope full` or `--all-tools` — every API operation as a tool. When running from the repo, you can use the wrapper: `node bin/flexprice-mcp-start.js start ... --all-tools` (it forwards `--scope full` to the server).
-
-Example for all tools:
-
-```json
-"args": ["-y", "@omkar273/mcp-temp", "start", "--server-url", "https://api.cloud.flexprice.io/v1", "--api-key-auth", "YOUR_API_KEY", "--scope", "full"]
-```
-
 ## Progressive discovery (dynamic mode)
 
 Servers with many tools can bloat context and token usage. **Dynamic mode** exposes a small set of meta-tools so the assistant can discover and call operations on demand:
@@ -226,14 +205,20 @@ Servers with many tools can bloat context and token usage. **Dynamic mode** expo
 To enable dynamic mode, add `--mode dynamic` when starting the server:
 
 ```json
-"args": ["-y", "@omkar273/mcp-temp", "start", "--server-url", "https://api.cloud.flexprice.io/v1", "--api-key-auth", "YOUR_API_KEY", "--scope", "default", "--mode", "dynamic"]
+"args": ["-y", "@omkar273/mcp-temp", "start", "--server-url", "https://api.cloud.flexprice.io/v1", "--api-key-auth", "YOUR_API_KEY", "--mode", "dynamic"]
 ```
 
 This reduces tokens per request and can improve tool choice when there are many operations.
 
-## Scopes (advanced)
+## Scopes
 
-The server supports `--scope default` (curated tools: Customers, Invoices, Subscriptions, Plans, Features) and `--scope full` (all API tools). See [Tool scopes (default vs all tools)](#tool-scopes-default-vs-all-tools) above.
+If the server is configured with scopes (e.g. `read`, `write`), you can limit tools by scope:
+
+```bash
+npx @omkar273/mcp-temp start --server-url https://api.cloud.flexprice.io/v1 --api-key-auth YOUR_API_KEY --scope read
+```
+
+Use `read` for read-only access when the server defines a `read` scope.
 
 ## Troubleshooting
 
@@ -263,11 +248,11 @@ The server supports `--scope default` (curated tools: Customers, Invoices, Subsc
 
 ## Generating the MCP server
 
-The server is generated with **Speakeasy** from the OpenAPI spec with overlays (retries + MCP scopes for `default` / `full`). To regenerate after API or overlay changes:
+The server is generated with **Speakeasy** from the OpenAPI spec (e.g. `docs/swagger/swagger-3-0.json`). To regenerate after API or overlay changes:
 
 1. Install the [Speakeasy CLI](https://www.speakeasy.com/).
-2. From the repo root, run `make sdk-all` (which runs `generate-mcp-overlay`, `apply-overlays`, then Speakeasy to output `api/mcp`).
-3. Run `make merge-custom` so custom files (this README, `bin/flexprice-mcp-start.js`) are merged into the output.
+2. From the repo root, run the generation target for the MCP server (e.g. `make sdk-all` or the Speakeasy workflow that outputs to `api/mcp`).
+3. Run `make merge-custom` so custom files (including this README) are merged into the output.
 4. Build and run: `npm run build` and `npm start` from the MCP output directory.
 
 See the main repo README and [AGENTS.md](AGENTS.md) for SDK/MCP generation and publishing.

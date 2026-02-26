@@ -17,10 +17,9 @@ export const tool$taxAssociationsDeleteTaxAssociation: ToolDefinition<
   description: `Delete tax association
 
 Use when removing a tax association (e.g. entity no longer subject to that rate).`,
-  scopes: ["full"],
   annotations: {
     "title": "",
-    "destructiveHint": false,
+    "destructiveHint": true,
     "idempotentHint": false,
     "openWorldHint": false,
     "readOnlyHint": false,

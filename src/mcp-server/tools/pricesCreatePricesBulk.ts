@@ -15,7 +15,6 @@ export const tool$pricesCreatePricesBulk: ToolDefinition<typeof args> = {
   description: `Create prices in bulk
 
 Use when creating many prices at once (e.g. importing a catalog or setting up a plan with multiple tiers).`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

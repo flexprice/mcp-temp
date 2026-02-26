@@ -15,10 +15,9 @@ export const tool$featuresDeleteFeature: ToolDefinition<typeof args> = {
   description: `Delete feature
 
 Use when retiring a feature (e.g. deprecated capability). Returns 200 with success message.`,
-  scopes: ["full", "default", "full"],
   annotations: {
     "title": "",
-    "destructiveHint": false,
+    "destructiveHint": true,
     "idempotentHint": false,
     "openWorldHint": false,
     "readOnlyHint": false,

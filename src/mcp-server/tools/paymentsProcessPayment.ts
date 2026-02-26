@@ -15,7 +15,6 @@ export const tool$paymentsProcessPayment: ToolDefinition<typeof args> = {
   description: `Process payment
 
 Use when you need to charge or process a payment (e.g. trigger the payment provider to capture funds). Returns updated payment with status.`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

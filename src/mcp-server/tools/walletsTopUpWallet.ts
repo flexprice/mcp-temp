@@ -15,7 +15,6 @@ export const tool$walletsTopUpWallet: ToolDefinition<typeof args> = {
   description: `Top up wallet
 
 Use when adding funds to a wallet (e.g. top-up, refund, or manual credit). Supports optional idempotency via reference.`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

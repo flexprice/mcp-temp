@@ -16,13 +16,12 @@ export const tool$entitlementsGetPlanEntitlements: ToolDefinition<typeof args> =
     description: `Get plan entitlements
 
 Use when checking what a plan includes (e.g. feature list or limits for display or gating).`,
-    scopes: ["full"],
     annotations: {
       "title": "",
       "destructiveHint": false,
       "idempotentHint": false,
       "openWorldHint": false,
-      "readOnlyHint": false,
+      "readOnlyHint": true,
     },
     args,
     tool: async (client, args, ctx) => {

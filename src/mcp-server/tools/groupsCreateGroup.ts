@@ -15,7 +15,6 @@ export const tool$groupsCreateGroup: ToolDefinition<typeof args> = {
   description: `Create group
 
 Use when organizing entities into a group (e.g. for filtering prices or plans by product line or region).`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

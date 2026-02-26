@@ -17,13 +17,12 @@ export const tool$subscriptionsGetSubscriptionSchedule: ToolDefinition<
   description: `Get subscription schedule
 
 Use when you need to load a single scheduled change (e.g. to show when a plan change or renewal takes effect).`,
-  scopes: ["full", "default", "full"],
   annotations: {
     "title": "",
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": false,
+    "readOnlyHint": true,
   },
   args,
   tool: async (client, args, ctx) => {

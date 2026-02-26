@@ -15,7 +15,6 @@ export const tool$workflowsQueryWorkflow: ToolDefinition<typeof args> = {
   description: `Query workflows
 
 Use when listing or auditing workflow runs (e.g. ops dashboard or debugging). Returns a paginated list; supports filtering by workflow type and status.`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

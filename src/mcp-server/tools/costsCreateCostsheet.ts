@@ -15,7 +15,6 @@ export const tool$costsCreateCostsheet: ToolDefinition<typeof args> = {
   description: `Create costsheet
 
 Use when setting up a new pricing configuration (e.g. a new product or region). Costsheets group prices and define the default for the environment.`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

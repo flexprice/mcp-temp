@@ -10,13 +10,12 @@ export const tool$rbacListRBACRoles: ToolDefinition = {
   description: `List all RBAC roles
 
 Use when building role pickers or permission UIs. Returns all roles with permissions and descriptions.`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": false,
+    "readOnlyHint": true,
   },
   tool: async (client, ctx) => {
     const [result] = await rbacListRBACRoles(

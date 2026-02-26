@@ -17,7 +17,6 @@ export const tool$subscriptionsExecuteSubscriptionChange: ToolDefinition<
   description: `Execute subscription plan change
 
 Use when applying a plan change (e.g. upgrade or downgrade). Executes proration and generates invoice or credit as needed.`,
-  scopes: ["full", "default", "full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

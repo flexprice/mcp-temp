@@ -15,13 +15,12 @@ export const tool$priceUnitsGetPriceUnit: ToolDefinition<typeof args> = {
   description: `Get price unit
 
 Use when you need to load a single price unit (e.g. for display or when creating a price).`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": false,
+    "readOnlyHint": true,
   },
   args,
   tool: async (client, args, ctx) => {

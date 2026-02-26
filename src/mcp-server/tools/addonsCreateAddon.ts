@@ -15,7 +15,6 @@ export const tool$addonsCreateAddon: ToolDefinition<typeof args> = {
   description: `Create addon
 
 Use when defining an optional purchasable item (e.g. extra storage or support tier). Ideal for add-ons that customers can attach to a subscription.`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

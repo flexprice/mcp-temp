@@ -15,7 +15,6 @@ export const tool$tasksCreateTask: ToolDefinition<typeof args> = {
   description: `Create a new task
 
 Use when submitting a file or job for async processing (e.g. export or import). Returns task ID to poll for status and result.`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

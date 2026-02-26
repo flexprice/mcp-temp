@@ -15,13 +15,12 @@ export const tool$integrationsGetIntegration: ToolDefinition<typeof args> = {
   description: `Get integration details
 
 Use when you need to check or display integration config (e.g. which provider is linked). Sensitive values may be redacted.`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": false,
+    "readOnlyHint": true,
   },
   args,
   tool: async (client, args, ctx) => {

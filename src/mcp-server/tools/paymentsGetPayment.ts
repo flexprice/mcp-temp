@@ -15,13 +15,12 @@ export const tool$paymentsGetPayment: ToolDefinition<typeof args> = {
   description: `Get payment
 
 Use when you need to load a single payment (e.g. for a receipt view or reconciliation).`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": false,
+    "readOnlyHint": true,
   },
   args,
   tool: async (client, args, ctx) => {

@@ -17,13 +17,12 @@ export const tool$scheduledTasksListScheduledTasks: ToolDefinition<
   description: `List scheduled tasks
 
 Use when listing or managing scheduled tasks in an admin UI. Returns a list; supports filtering by status, type, and pagination.`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": false,
+    "readOnlyHint": true,
   },
   args,
   tool: async (client, args, ctx) => {

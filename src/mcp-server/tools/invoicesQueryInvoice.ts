@@ -15,7 +15,6 @@ export const tool$invoicesQueryInvoice: ToolDefinition<typeof args> = {
   description: `Query invoices
 
 Use when listing or searching invoices (e.g. admin view or customer history). Returns a paginated list; supports filtering by customer, status, date range.`,
-  scopes: ["full", "default", "full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

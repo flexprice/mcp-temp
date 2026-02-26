@@ -15,7 +15,6 @@ export const tool$webhooksHandleMoyasarWebhook: ToolDefinition<typeof args> = {
   description: `Handle Moyasar webhook events
 
 Use as the Moyasar webhook endpoint URL. Receives payment events from Moyasar to update payment status in FlexPrice.`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

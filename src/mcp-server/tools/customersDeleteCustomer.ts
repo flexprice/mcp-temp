@@ -15,10 +15,9 @@ export const tool$customersDeleteCustomer: ToolDefinition<typeof args> = {
   description: `Delete customer
 
 Use when removing a customer (e.g. GDPR or churn). Returns 204 No Content on success.`,
-  scopes: ["full", "default", "full"],
   annotations: {
     "title": "",
-    "destructiveHint": false,
+    "destructiveHint": true,
     "idempotentHint": false,
     "openWorldHint": false,
     "readOnlyHint": false,

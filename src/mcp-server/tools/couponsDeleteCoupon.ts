@@ -15,10 +15,9 @@ export const tool$couponsDeleteCoupon: ToolDefinition<typeof args> = {
   description: `Delete coupon
 
 Use when retiring a coupon (e.g. campaign ended). Returns 200 with success message.`,
-  scopes: ["full"],
   annotations: {
     "title": "",
-    "destructiveHint": false,
+    "destructiveHint": true,
     "idempotentHint": false,
     "openWorldHint": false,
     "readOnlyHint": false,

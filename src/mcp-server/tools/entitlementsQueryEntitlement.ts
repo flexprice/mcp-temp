@@ -15,7 +15,6 @@ export const tool$entitlementsQueryEntitlement: ToolDefinition<typeof args> = {
   description: `Query entitlements
 
 Use when listing or searching entitlements (e.g. plan editor or audit). Returns a paginated list; supports filtering by plan, addon, feature.`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

@@ -17,7 +17,6 @@ export const tool$taxAssociationsCreateTaxAssociation: ToolDefinition<
   description: `Create Tax Association
 
 Use when linking a tax rate to an entity (e.g. customer, product, or region) so that rate applies on invoices.`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

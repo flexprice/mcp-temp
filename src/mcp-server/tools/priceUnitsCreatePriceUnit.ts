@@ -15,7 +15,6 @@ export const tool$priceUnitsCreatePriceUnit: ToolDefinition<typeof args> = {
   description: `Create price unit
 
 Use when defining a new unit of measure for pricing (e.g. GB, API call, seat). Ideal for metered or usage-based prices.`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

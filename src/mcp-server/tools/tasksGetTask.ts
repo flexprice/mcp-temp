@@ -15,13 +15,12 @@ export const tool$tasksGetTask: ToolDefinition<typeof args> = {
   description: `Get a task
 
 Use when checking task status or progress (e.g. polling after create). Returns task by ID.`,
-  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": false,
+    "readOnlyHint": true,
   },
   args,
   tool: async (client, args, ctx) => {
