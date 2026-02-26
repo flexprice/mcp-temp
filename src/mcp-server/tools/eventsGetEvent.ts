@@ -11,7 +11,7 @@ const args = {
 };
 
 export const tool$eventsGetEvent: ToolDefinition<typeof args> = {
-  name: "events-get-event",
+  name: "get-event",
   description: `Get event
 
 Use when debugging a specific event (e.g. why it failed or how it was aggregated). Includes processing status and debug info.`,
@@ -20,7 +20,7 @@ Use when debugging a specific event (e.g. why it failed or how it was aggregated
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": true,
+    "readOnlyHint": false,
   },
   args,
   tool: async (client, args, ctx) => {

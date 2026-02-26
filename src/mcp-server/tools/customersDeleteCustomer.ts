@@ -11,13 +11,13 @@ const args = {
 };
 
 export const tool$customersDeleteCustomer: ToolDefinition<typeof args> = {
-  name: "customers-delete-customer",
+  name: "delete-customer",
   description: `Delete customer
 
 Use when removing a customer (e.g. GDPR or churn). Returns 204 No Content on success.`,
   annotations: {
     "title": "",
-    "destructiveHint": true,
+    "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
     "readOnlyHint": false,

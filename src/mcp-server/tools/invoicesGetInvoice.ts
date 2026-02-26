@@ -11,7 +11,7 @@ const args = {
 };
 
 export const tool$invoicesGetInvoice: ToolDefinition<typeof args> = {
-  name: "invoices-get-invoice",
+  name: "get-invoice",
   description: `Get invoice
 
 Use when loading an invoice for display or editing (e.g. portal or reconciliation). Supports group_by for usage breakdown and force_runtime_recalculation.`,
@@ -20,7 +20,7 @@ Use when loading an invoice for display or editing (e.g. portal or reconciliatio
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": true,
+    "readOnlyHint": false,
   },
   args,
   tool: async (client, args, ctx) => {

@@ -13,7 +13,7 @@ const args = {
 export const tool$invoicesGetCustomerInvoiceSummary: ToolDefinition<
   typeof args
 > = {
-  name: "invoices-get-customer-invoice-summary",
+  name: "get-customer-invoice-summary",
   description: `Get customer invoice summary
 
 Use when showing a customer's invoice overview (e.g. billing portal or balance summary). Includes totals and multi-currency breakdown.`,
@@ -22,7 +22,7 @@ Use when showing a customer's invoice overview (e.g. billing portal or balance s
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": true,
+    "readOnlyHint": false,
   },
   args,
   tool: async (client, args, ctx) => {

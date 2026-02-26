@@ -13,7 +13,7 @@ const args = {
 export const tool$customersGetCustomerUsageSummary: ToolDefinition<
   typeof args
 > = {
-  name: "customers-get-customer-usage-summary",
+  name: "get-customer-usage-summary",
   description: `Get customer usage summary
 
 Use when showing a customer's usage (e.g. portal or overage alerts). Identify by customer_id or customer_lookup_key; supports filters.`,
@@ -22,7 +22,7 @@ Use when showing a customer's usage (e.g. portal or overage alerts). Identify by
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": true,
+    "readOnlyHint": false,
   },
   args,
   tool: async (client, args, ctx) => {
