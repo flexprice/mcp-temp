@@ -15,12 +15,13 @@ export const tool$costsGetCostsheet: ToolDefinition<typeof args> = {
   description: `Get costsheet
 
 Use when you need to load a single costsheet (e.g. for editing or display). Supports optional expand for related prices.`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": true,
+    "readOnlyHint": false,
   },
   args,
   tool: async (client, args, ctx) => {

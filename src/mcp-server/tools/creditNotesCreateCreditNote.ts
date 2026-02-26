@@ -15,6 +15,7 @@ export const tool$creditNotesCreateCreditNote: ToolDefinition<typeof args> = {
   description: `Create credit note
 
 Use when issuing a refund or adjustment (e.g. customer dispute or proration). Links to an invoice; create as draft then finalize.`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

@@ -15,6 +15,7 @@ export const tool$environmentsUpdateEnvironment: ToolDefinition<typeof args> = {
   description: `Update environment
 
 Use when changing environment name or settings (e.g. renaming or updating metadata).`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

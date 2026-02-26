@@ -15,9 +15,10 @@ export const tool$costsDeleteCostsheet: ToolDefinition<typeof args> = {
   description: `Delete costsheet
 
 Use when retiring a costsheet (e.g. end-of-life product). Soft-deletes; status set to deleted.`,
+  scopes: ["full"],
   annotations: {
     "title": "",
-    "destructiveHint": true,
+    "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
     "readOnlyHint": false,

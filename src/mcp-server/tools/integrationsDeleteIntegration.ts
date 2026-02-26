@@ -15,9 +15,10 @@ export const tool$integrationsDeleteIntegration: ToolDefinition<typeof args> = {
   description: `Delete an integration
 
 Use when disconnecting an integration (e.g. switching provider or removing OAuth). Deletes stored credentials.`,
+  scopes: ["full"],
   annotations: {
     "title": "",
-    "destructiveHint": true,
+    "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
     "readOnlyHint": false,

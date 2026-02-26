@@ -10,12 +10,13 @@ export const tool$tenantsGetTenantBillingUsage: ToolDefinition = {
   description: `Get billing usage for the current tenant
 
 Use when showing the current tenant's billing usage (e.g. admin billing page or usage caps). Returns subscription and usage for the tenant.`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": true,
+    "readOnlyHint": false,
   },
   tool: async (client, ctx) => {
     const [result] = await tenantsGetTenantBillingUsage(

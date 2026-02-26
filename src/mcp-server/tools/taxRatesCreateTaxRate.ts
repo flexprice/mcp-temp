@@ -15,6 +15,7 @@ export const tool$taxRatesCreateTaxRate: ToolDefinition<typeof args> = {
   description: `Create a tax rate
 
 Use when defining a new tax rate (e.g. VAT or sales tax) for use in invoices. Attach to customers or products via tax associations.`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

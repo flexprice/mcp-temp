@@ -16,6 +16,7 @@ export const tool$subscriptionsUpdateSubscription: ToolDefinition<typeof args> =
     description: `Update subscription
 
 Use when changing subscription details (e.g. quantity, billing anchor, or parent). Supports partial update; send "" to clear parent_subscription_id.`,
+    scopes: ["full", "default", "full"],
     annotations: {
       "title": "",
       "destructiveHint": false,

@@ -15,6 +15,7 @@ export const tool$creditNotesProcessCreditNote: ToolDefinition<typeof args> = {
   description: `Finalize credit note
 
 Use when locking a draft credit note and applying the credit (e.g. after approval). Once finalized, applied per billing provider.`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

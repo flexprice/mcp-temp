@@ -15,6 +15,7 @@ export const tool$tasksUpdateTaskStatus: ToolDefinition<typeof args> = {
   description: `Update task status
 
 Use when updating task status (e.g. marking complete or failed from a worker). Typically called by backend processors.`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

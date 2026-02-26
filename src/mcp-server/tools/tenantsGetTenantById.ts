@@ -15,12 +15,13 @@ export const tool$tenantsGetTenantById: ToolDefinition<typeof args> = {
   description: `Get tenant by ID
 
 Get tenant by ID`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": true,
+    "readOnlyHint": false,
   },
   args,
   tool: async (client, args, ctx) => {

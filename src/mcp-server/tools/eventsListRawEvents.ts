@@ -15,6 +15,7 @@ export const tool$eventsListRawEvents: ToolDefinition<typeof args> = {
   description: `List raw events
 
 Use when debugging ingestion or exporting raw event data (e.g. support or audit). Returns a paginated list; supports time range and sorting.`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

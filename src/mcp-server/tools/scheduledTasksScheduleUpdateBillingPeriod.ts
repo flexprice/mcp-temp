@@ -17,6 +17,7 @@ export const tool$scheduledTasksScheduleUpdateBillingPeriod: ToolDefinition<
   description: `Schedule update billing period
 
 Use when you need to trigger a billing-period update workflow (e.g. to recalculate or sync billing windows).`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

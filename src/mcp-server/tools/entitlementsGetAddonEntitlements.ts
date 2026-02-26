@@ -17,12 +17,13 @@ export const tool$entitlementsGetAddonEntitlements: ToolDefinition<
   description: `Get addon entitlements
 
 Use when checking what features or limits an addon grants (e.g. for display or entitlement logic).`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": true,
+    "readOnlyHint": false,
   },
   args,
   tool: async (client, args, ctx) => {

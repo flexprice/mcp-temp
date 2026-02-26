@@ -15,6 +15,7 @@ export const tool$alertsQueryAlertLog: ToolDefinition<typeof args> = {
   description: `Query alert logs
 
 Use when viewing or searching alert history (e.g. support triage or customer-facing alert log). Returns a paginated list; supports filtering by type, customer, subscription.`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

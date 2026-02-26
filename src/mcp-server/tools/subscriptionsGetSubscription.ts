@@ -15,12 +15,13 @@ export const tool$subscriptionsGetSubscription: ToolDefinition<typeof args> = {
   description: `Get subscription
 
 Use when you need to load a single subscription (e.g. for a billing portal or to check status).`,
+  scopes: ["full", "default", "full"],
   annotations: {
     "title": "",
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": true,
+    "readOnlyHint": false,
   },
   args,
   tool: async (client, args, ctx) => {

@@ -17,9 +17,10 @@ export const tool$scheduledTasksDeleteScheduledTask: ToolDefinition<
   description: `Delete a scheduled task
 
 Use when removing a scheduled task from the active roster. Archives the task and removes it from the scheduler (soft delete).`,
+  scopes: ["full"],
   annotations: {
     "title": "",
-    "destructiveHint": true,
+    "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
     "readOnlyHint": false,

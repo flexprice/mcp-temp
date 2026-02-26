@@ -15,6 +15,7 @@ export const tool$webhooksHandleHubspotWebhook: ToolDefinition<typeof args> = {
   description: `Handle HubSpot webhook events
 
 Use as the HubSpot webhook endpoint URL. Receives deal and customer events (e.g. deal closed won) to create or update customers in FlexPrice.`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

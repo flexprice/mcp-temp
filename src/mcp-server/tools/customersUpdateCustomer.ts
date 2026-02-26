@@ -15,6 +15,7 @@ export const tool$customersUpdateCustomer: ToolDefinition<typeof args> = {
   description: `Update customer
 
 Use when updating customer details (e.g. name, email, or metadata). Identify by id or external_customer_id.`,
+  scopes: ["full", "default", "full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

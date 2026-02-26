@@ -15,12 +15,13 @@ export const tool$taxRatesGetTaxRates: ToolDefinition<typeof args> = {
   description: `Get tax rates
 
 Use when listing tax rates (e.g. tax config UI). Returns tax rates with optional filters.`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": true,
+    "readOnlyHint": false,
   },
   args,
   tool: async (client, args, ctx) => {

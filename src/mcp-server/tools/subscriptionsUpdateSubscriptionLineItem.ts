@@ -17,6 +17,7 @@ export const tool$subscriptionsUpdateSubscriptionLineItem: ToolDefinition<
   description: `Update subscription line item
 
 Use when changing a subscription line item (e.g. quantity or price). Implemented by ending the current line and creating a new one for clean billing.`,
+  scopes: ["full", "default", "full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

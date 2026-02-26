@@ -15,12 +15,13 @@ export const tool$customersGetCustomer: ToolDefinition<typeof args> = {
   description: `Get customer
 
 Use when you need to load a single customer (e.g. for a billing portal or to attach a subscription).`,
+  scopes: ["full", "default", "full"],
   annotations: {
     "title": "",
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": true,
+    "readOnlyHint": false,
   },
   args,
   tool: async (client, args, ctx) => {

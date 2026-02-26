@@ -15,6 +15,7 @@ export const tool$pricesUpdatePrice: ToolDefinition<typeof args> = {
   description: `Update price
 
 Use when changing price configuration (e.g. amount, billing scheme, or metadata).`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

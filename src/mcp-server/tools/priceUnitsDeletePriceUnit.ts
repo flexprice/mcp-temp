@@ -15,9 +15,10 @@ export const tool$priceUnitsDeletePriceUnit: ToolDefinition<typeof args> = {
   description: `Delete price unit
 
 Use when removing a price unit that is no longer needed. Fails if any price references this unit.`,
+  scopes: ["full"],
   annotations: {
     "title": "",
-    "destructiveHint": true,
+    "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
     "readOnlyHint": false,

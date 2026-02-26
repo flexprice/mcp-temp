@@ -15,6 +15,7 @@ export const tool$walletsQueryWalletTransaction: ToolDefinition<typeof args> = {
   description: `Query wallet transactions
 
 Use when searching or reporting on wallet transactions (e.g. cross-wallet history or reconciliation). Returns a paginated list; supports filtering by wallet, customer, type, date range.`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

@@ -15,6 +15,7 @@ export const tool$plansUpdatePlan: ToolDefinition<typeof args> = {
   description: `Update plan
 
 Use when changing plan details (e.g. name, interval, or metadata). Partial update supported.`,
+  scopes: ["full", "default", "full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

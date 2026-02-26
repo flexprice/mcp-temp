@@ -16,6 +16,7 @@ export const tool$subscriptionsCancelSubscription: ToolDefinition<typeof args> =
     description: `Cancel subscription
 
 Use when a customer churns or downgrades. Supports immediate or end-of-period cancellation and proration. Ideal for self-serve or support-driven cancellations.`,
+    scopes: ["full", "default", "full"],
     annotations: {
       "title": "",
       "destructiveHint": false,

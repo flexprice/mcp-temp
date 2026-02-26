@@ -15,6 +15,7 @@ export const tool$paymentsCreatePayment: ToolDefinition<typeof args> = {
   description: `Create payment
 
 Use when recording a payment against an invoice (e.g. after receiving funds via a gateway or manual entry).`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

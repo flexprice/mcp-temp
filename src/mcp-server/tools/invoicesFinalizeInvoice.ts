@@ -15,6 +15,7 @@ export const tool$invoicesFinalizeInvoice: ToolDefinition<typeof args> = {
   description: `Finalize invoice
 
 Use when locking an invoice for payment (e.g. after review). Once finalized, line items are locked; invoice can be paid or voided.`,
+  scopes: ["full", "default", "full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

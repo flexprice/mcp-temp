@@ -15,6 +15,7 @@ export const tool$costsGetDetailedCostAnalytics: ToolDefinition<typeof args> = {
   description: `Get combined revenue and cost analytics
 
 Use when building dashboards or reports that need revenue vs cost, ROI, and margin over a time period (e.g. finance views or executive summaries).`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

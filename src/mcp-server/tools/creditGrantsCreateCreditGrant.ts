@@ -15,6 +15,7 @@ export const tool$creditGrantsCreateCreditGrant: ToolDefinition<typeof args> = {
   description: `Create credit grant
 
 Use when giving a customer or plan credits (e.g. prepaid balance or promotional credits). Scope can be plan or subscription; supports start/end dates.`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

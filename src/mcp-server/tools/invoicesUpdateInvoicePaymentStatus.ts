@@ -17,6 +17,7 @@ export const tool$invoicesUpdateInvoicePaymentStatus: ToolDefinition<
   description: `Update invoice payment status
 
 Use when reconciling payment status from an external gateway or manual entry (e.g. mark paid after bank confirmation).`,
+  scopes: ["full", "default", "full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

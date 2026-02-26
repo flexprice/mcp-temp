@@ -15,6 +15,7 @@ export const tool$webhooksHandleRazorpayWebhook: ToolDefinition<typeof args> = {
   description: `Handle Razorpay webhook events
 
 Use as the Razorpay webhook endpoint URL. Receives payment capture and failure events to update invoice or payment status in FlexPrice.`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

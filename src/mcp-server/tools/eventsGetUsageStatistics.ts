@@ -15,6 +15,7 @@ export const tool$eventsGetUsageStatistics: ToolDefinition<typeof args> = {
   description: `Get usage statistics
 
 Use when building usage reports or dashboards across events. Supports filters and grouping; defaults to last 7 days if no range provided.`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

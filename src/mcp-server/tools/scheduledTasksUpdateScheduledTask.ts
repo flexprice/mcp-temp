@@ -17,6 +17,7 @@ export const tool$scheduledTasksUpdateScheduledTask: ToolDefinition<
   description: `Update a scheduled task
 
 Use when pausing or resuming a scheduled task. Only the enabled field can be changed.`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

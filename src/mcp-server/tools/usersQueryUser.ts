@@ -15,6 +15,7 @@ export const tool$usersQueryUser: ToolDefinition<typeof args> = {
   description: `Query users
 
 Use when listing or searching service accounts in an admin UI, or when auditing who has API access and which roles they have.`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

@@ -15,9 +15,10 @@ export const tool$taxRatesDeleteTaxRate: ToolDefinition<typeof args> = {
   description: `Delete a tax rate
 
 Use when retiring a tax rate (e.g. no longer applicable). Fails if still referenced by associations.`,
+  scopes: ["full"],
   annotations: {
     "title": "",
-    "destructiveHint": true,
+    "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
     "readOnlyHint": false,

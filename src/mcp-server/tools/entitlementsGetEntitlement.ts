@@ -15,12 +15,13 @@ export const tool$entitlementsGetEntitlement: ToolDefinition<typeof args> = {
   description: `Get entitlement
 
 Use when you need to load a single entitlement (e.g. to display or edit a feature limit).`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": true,
+    "readOnlyHint": false,
   },
   args,
   tool: async (client, args, ctx) => {

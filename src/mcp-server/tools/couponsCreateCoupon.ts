@@ -15,6 +15,7 @@ export const tool$couponsCreateCoupon: ToolDefinition<typeof args> = {
   description: `Create coupon
 
 Use when creating a discount (e.g. promo code or referral). Ideal for percent or fixed value, with optional validity and usage limits.`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

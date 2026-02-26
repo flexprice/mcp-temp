@@ -15,12 +15,13 @@ export const tool$plansGetPlan: ToolDefinition<typeof args> = {
   description: `Get plan
 
 Use when you need to load a single plan (e.g. for display or to create a subscription).`,
+  scopes: ["full", "default", "full"],
   annotations: {
     "title": "",
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": true,
+    "readOnlyHint": false,
   },
   args,
   tool: async (client, args, ctx) => {

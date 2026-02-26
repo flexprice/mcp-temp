@@ -16,9 +16,10 @@ export const tool$entityIntegrationMappingsDeleteEntityIntegrationMapping:
     description: `Delete entity integration mapping
 
 Use when unlinking a FlexPrice entity from an external system or cleaning up stale integration mappings.`,
+    scopes: ["full"],
     annotations: {
       "title": "",
-      "destructiveHint": true,
+      "destructiveHint": false,
       "idempotentHint": false,
       "openWorldHint": false,
       "readOnlyHint": false,

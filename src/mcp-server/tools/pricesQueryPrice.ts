@@ -15,6 +15,7 @@ export const tool$pricesQueryPrice: ToolDefinition<typeof args> = {
   description: `Query prices
 
 Use when listing or searching prices (e.g. plan builder or catalog). Returns a paginated list; supports filtering and sorting.`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

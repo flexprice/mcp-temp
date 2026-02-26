@@ -15,12 +15,13 @@ export const tool$creditNotesGetCreditNote: ToolDefinition<typeof args> = {
   description: `Get credit note
 
 Use when you need to load a single credit note (e.g. for display or reconciliation).`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": true,
+    "readOnlyHint": false,
   },
   args,
   tool: async (client, args, ctx) => {

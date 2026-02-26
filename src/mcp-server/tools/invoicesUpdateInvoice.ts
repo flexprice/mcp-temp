@@ -15,6 +15,7 @@ export const tool$invoicesUpdateInvoice: ToolDefinition<typeof args> = {
   description: `Update invoice
 
 Use when updating invoice metadata or due date (e.g. PDF URL, net terms). For paid invoices only safe fields can be updated.`,
+  scopes: ["full", "default", "full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

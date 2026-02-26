@@ -15,9 +15,10 @@ export const tool$secretsDeleteApiKey: ToolDefinition<typeof args> = {
   description: `Delete an API key
 
 Use when revoking an API key (e.g. rotation or compromise). Permanently invalidates the key.`,
+  scopes: ["full"],
   annotations: {
     "title": "",
-    "destructiveHint": true,
+    "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
     "readOnlyHint": false,

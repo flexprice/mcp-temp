@@ -15,6 +15,7 @@ export const tool$entitlementsCreateEntitlement: ToolDefinition<typeof args> = {
   description: `Create entitlement
 
 Use when attaching a feature (and its limit) to a plan or addon (e.g. "10 seats" or "1000 API calls"). Defines what the plan/addon includes.`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

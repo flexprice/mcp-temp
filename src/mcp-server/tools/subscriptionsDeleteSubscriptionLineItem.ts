@@ -17,9 +17,10 @@ export const tool$subscriptionsDeleteSubscriptionLineItem: ToolDefinition<
   description: `Delete subscription line item
 
 Use when removing a charge or seat from a subscription (e.g. downgrade). Line item ends; retained for history but no longer billed.`,
+  scopes: ["full", "default", "full"],
   annotations: {
     "title": "",
-    "destructiveHint": true,
+    "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
     "readOnlyHint": false,

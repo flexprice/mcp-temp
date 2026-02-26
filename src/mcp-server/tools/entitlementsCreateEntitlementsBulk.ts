@@ -17,6 +17,7 @@ export const tool$entitlementsCreateEntitlementsBulk: ToolDefinition<
   description: `Create entitlements in bulk
 
 Use when attaching many features to a plan or addon at once (e.g. initial plan setup or import). Bulk version of create entitlement.`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

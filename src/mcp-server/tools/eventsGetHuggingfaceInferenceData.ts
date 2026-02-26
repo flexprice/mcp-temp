@@ -10,6 +10,7 @@ export const tool$eventsGetHuggingfaceInferenceData: ToolDefinition = {
   description: `Get Hugging Face inference data
 
 Use when fetching Hugging Face inference usage or billing data (e.g. for HF-specific reporting or reconciliation).`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

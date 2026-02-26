@@ -17,6 +17,7 @@ export const tool$scheduledTasksCreateScheduledTask: ToolDefinition<
   description: `Create scheduled task
 
 Use when setting up recurring data exports or other scheduled jobs. Ideal for report generation or syncing data on a schedule.`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

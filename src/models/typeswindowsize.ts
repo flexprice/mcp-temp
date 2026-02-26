@@ -6,7 +6,6 @@ import * as z from "zod";
 import { ClosedEnum } from "../types/enums.js";
 
 export const TypesWindowSize = {
-  Month: "MONTH",
   Minute: "MINUTE",
   FifteenMIN: "15MIN",
   ThirtyMIN: "30MIN",
@@ -16,11 +15,11 @@ export const TypesWindowSize = {
   TwelveHOUR: "12HOUR",
   Day: "DAY",
   Week: "WEEK",
+  Month: "MONTH",
 } as const;
 export type TypesWindowSize = ClosedEnum<typeof TypesWindowSize>;
 
 export const TypesWindowSize$zodSchema = z.enum([
-  "MONTH",
   "MINUTE",
   "15MIN",
   "30MIN",
@@ -30,4 +29,5 @@ export const TypesWindowSize$zodSchema = z.enum([
   "12HOUR",
   "DAY",
   "WEEK",
+  "MONTH",
 ]);

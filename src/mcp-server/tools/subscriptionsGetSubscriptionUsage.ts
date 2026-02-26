@@ -17,6 +17,7 @@ export const tool$subscriptionsGetSubscriptionUsage: ToolDefinition<
   description: `Get usage by subscription
 
 Use when showing usage for a subscription (e.g. in a portal or for overage checks). Supports time range and filters.`,
+  scopes: ["full", "default", "full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

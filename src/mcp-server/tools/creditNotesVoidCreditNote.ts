@@ -15,6 +15,7 @@ export const tool$creditNotesVoidCreditNote: ToolDefinition<typeof args> = {
   description: `Void credit note
 
 Use when cancelling a draft credit note (e.g. created by mistake). Only draft credit notes can be voided.`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

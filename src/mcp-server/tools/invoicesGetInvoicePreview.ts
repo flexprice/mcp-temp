@@ -15,6 +15,7 @@ export const tool$invoicesGetInvoicePreview: ToolDefinition<typeof args> = {
   description: `Get invoice preview
 
 Use when showing a customer what they will be charged (e.g. preview before checkout or plan change). No invoice is created.`,
+  scopes: ["full", "default", "full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

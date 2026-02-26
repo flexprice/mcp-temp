@@ -17,6 +17,7 @@ export const tool$subscriptionsActivateSubscription: ToolDefinition<
   description: `Activate draft subscription
 
 Use when turning a draft subscription live (e.g. after collecting payment or completing setup). Once activated, billing and entitlements apply.`,
+  scopes: ["full", "default", "full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

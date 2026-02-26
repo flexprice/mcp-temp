@@ -15,6 +15,7 @@ export const tool$plansQueryPlan: ToolDefinition<typeof args> = {
   description: `Query plans
 
 Use when listing or searching plans (e.g. plan picker or admin catalog). Returns a paginated list; supports filtering and sorting.`,
+  scopes: ["full", "default", "full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

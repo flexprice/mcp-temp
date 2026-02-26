@@ -15,6 +15,7 @@ export const tool$featuresQueryFeature: ToolDefinition<typeof args> = {
   description: `Query features
 
 Use when listing or searching features (e.g. catalog or entitlement setup). Returns a paginated list; supports filtering and sorting.`,
+  scopes: ["full", "default", "full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

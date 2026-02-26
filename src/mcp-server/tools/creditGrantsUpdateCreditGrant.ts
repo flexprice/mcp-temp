@@ -15,6 +15,7 @@ export const tool$creditGrantsUpdateCreditGrant: ToolDefinition<typeof args> = {
   description: `Update credit grant
 
 Use when changing a credit grant (e.g. amount or end date). Request body contains the fields to update.`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

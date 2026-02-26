@@ -15,12 +15,13 @@ export const tool$addonsGetAddonByLookupKey: ToolDefinition<typeof args> = {
   description: `Get addon by lookup key
 
 Use when resolving an addon by external id (e.g. from your product catalog). Ideal for integrations.`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": true,
+    "readOnlyHint": false,
   },
   args,
   tool: async (client, args, ctx) => {

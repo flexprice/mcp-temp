@@ -15,6 +15,7 @@ export const tool$couponsQueryCoupon: ToolDefinition<typeof args> = {
   description: `Query coupons
 
 Use when listing or searching coupons (e.g. promo management). Returns a paginated list; supports filtering and sorting.`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

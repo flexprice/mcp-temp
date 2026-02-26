@@ -15,6 +15,7 @@ export const tool$eventsIngestEvent: ToolDefinition<typeof args> = {
   description: `Ingest event
 
 Use when sending a single usage event from your app (e.g. one API call or one GB stored). Events are processed asynchronously; returns 202 with event_id.`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

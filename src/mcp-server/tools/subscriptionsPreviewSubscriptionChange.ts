@@ -17,6 +17,7 @@ export const tool$subscriptionsPreviewSubscriptionChange: ToolDefinition<
   description: `Preview subscription plan change
 
 Use when showing a customer the cost of a plan change before they confirm (e.g. upgrade/downgrade preview with proration).`,
+  scopes: ["full", "default", "full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

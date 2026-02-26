@@ -17,12 +17,13 @@ export const tool$subscriptionsGetSubscriptionAddonAssociations: ToolDefinition<
   description: `Get active addon associations
 
 Use when listing which add-ons are currently attached to a subscription (e.g. for display or editing).`,
+  scopes: ["full", "default", "full"],
   annotations: {
     "title": "",
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": true,
+    "readOnlyHint": false,
   },
   args,
   tool: async (client, args, ctx) => {

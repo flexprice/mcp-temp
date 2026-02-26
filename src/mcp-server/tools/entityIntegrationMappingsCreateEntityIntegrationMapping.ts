@@ -16,6 +16,7 @@ export const tool$entityIntegrationMappingsCreateEntityIntegrationMapping:
     description: `Create entity integration mapping
 
 Use when linking a FlexPrice entity to an external system (e.g. CRM or payment provider) so you can sync or reconcile by external ID.`,
+    scopes: ["full"],
     annotations: {
       "title": "",
       "destructiveHint": false,

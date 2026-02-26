@@ -15,6 +15,7 @@ export const tool$walletsUpdateWallet: ToolDefinition<typeof args> = {
   description: `Update a wallet
 
 Use when changing wallet settings (e.g. enabling or updating auto top-up thresholds).`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

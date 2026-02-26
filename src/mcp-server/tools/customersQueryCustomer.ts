@@ -15,6 +15,7 @@ export const tool$customersQueryCustomer: ToolDefinition<typeof args> = {
   description: `Query customers
 
 Use when listing or searching customers (e.g. admin CRM or reporting). Returns a paginated list; supports filtering and sorting.`,
+  scopes: ["full", "default", "full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

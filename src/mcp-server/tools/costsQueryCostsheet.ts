@@ -15,6 +15,7 @@ export const tool$costsQueryCostsheet: ToolDefinition<typeof args> = {
   description: `Query costsheets
 
 Use when listing or searching costsheets (e.g. admin catalog). Returns a paginated list; supports filtering and sorting.`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

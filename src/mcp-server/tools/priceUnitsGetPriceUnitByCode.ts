@@ -15,12 +15,13 @@ export const tool$priceUnitsGetPriceUnitByCode: ToolDefinition<typeof args> = {
   description: `Get price unit by code
 
 Use when resolving a price unit by code (e.g. from an external catalog or config). Ideal for integrations.`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": true,
+    "readOnlyHint": false,
   },
   args,
   tool: async (client, args, ctx) => {

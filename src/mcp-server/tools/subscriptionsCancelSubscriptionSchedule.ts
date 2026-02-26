@@ -17,6 +17,7 @@ export const tool$subscriptionsCancelSubscriptionSchedule: ToolDefinition<
   description: `Cancel subscription schedule
 
 Use when cancelling a scheduled change (e.g. customer changed mind). Identify by schedule ID in path or by subscription ID + schedule type in body.`,
+  scopes: ["full", "default", "full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

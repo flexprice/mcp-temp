@@ -15,12 +15,13 @@ export const tool$couponsGetCoupon: ToolDefinition<typeof args> = {
   description: `Get coupon
 
 Use when you need to load a single coupon (e.g. for display or to validate a code).`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": true,
+    "readOnlyHint": false,
   },
   args,
   tool: async (client, args, ctx) => {

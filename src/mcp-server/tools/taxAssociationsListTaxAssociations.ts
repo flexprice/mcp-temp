@@ -17,12 +17,13 @@ export const tool$taxAssociationsListTaxAssociations: ToolDefinition<
   description: `List tax associations
 
 Use when listing tax associations (e.g. tax config or audit). Returns list with optional filtering.`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": true,
+    "readOnlyHint": false,
   },
   args,
   tool: async (client, args, ctx) => {

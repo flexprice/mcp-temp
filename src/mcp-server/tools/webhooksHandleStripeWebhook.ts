@@ -15,6 +15,7 @@ export const tool$webhooksHandleStripeWebhook: ToolDefinition<typeof args> = {
   description: `Handle Stripe webhook events
 
 Use as the Stripe webhook endpoint URL. Receives payment and customer events from Stripe to keep FlexPrice in sync (e.g. payment succeeded, customer created).`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

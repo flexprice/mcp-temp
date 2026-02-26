@@ -16,6 +16,7 @@ export const tool$costsGetDetailedCostAnalyticsV2: ToolDefinition<typeof args> =
     description: `Get combined revenue and cost analytics (V2)
 
 Use when you need the same revenue/cost/ROI analytics but computed from the costsheet usage-tracking pipeline (e.g. for consistency with usage-based cost data).`,
+    scopes: ["full"],
     annotations: {
       "title": "",
       "destructiveHint": false,

@@ -15,6 +15,7 @@ export const tool$customersCreateCustomer: ToolDefinition<typeof args> = {
   description: `Create customer
 
 Use when onboarding a new billing customer (e.g. sign-up or CRM sync). Ideal for linking via external_customer_id to your app's user id.`,
+  scopes: ["full", "default", "full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

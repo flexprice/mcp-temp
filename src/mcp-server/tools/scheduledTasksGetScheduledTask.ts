@@ -16,12 +16,13 @@ export const tool$scheduledTasksGetScheduledTask: ToolDefinition<typeof args> =
     description: `Get scheduled task
 
 Use when you need to load a single scheduled task (e.g. to show details in a UI or check its configuration).`,
+    scopes: ["full"],
     annotations: {
       "title": "",
       "destructiveHint": false,
       "idempotentHint": false,
       "openWorldHint": false,
-      "readOnlyHint": true,
+      "readOnlyHint": false,
     },
     args,
     tool: async (client, args, ctx) => {

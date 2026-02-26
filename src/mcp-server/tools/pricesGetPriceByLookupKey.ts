@@ -15,12 +15,13 @@ export const tool$pricesGetPriceByLookupKey: ToolDefinition<typeof args> = {
   description: `Get price by lookup key
 
 Use when resolving a price by external id (e.g. from your catalog or CMS). Ideal for integrations.`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": true,
+    "readOnlyHint": false,
   },
   args,
   tool: async (client, args, ctx) => {

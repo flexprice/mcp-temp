@@ -17,6 +17,7 @@ export const tool$integrationsCreateOrUpdateIntegration: ToolDefinition<
   description: `Create or update an integration
 
 Use when storing or updating credentials for an external integration (e.g. Stripe, HubSpot). Secrets are encrypted at rest.`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

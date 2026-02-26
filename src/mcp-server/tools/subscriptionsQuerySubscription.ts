@@ -16,6 +16,7 @@ export const tool$subscriptionsQuerySubscription: ToolDefinition<typeof args> =
     description: `Query subscriptions
 
 Use when listing or searching subscriptions (e.g. admin view or customer subscription list). Returns a paginated list; supports filtering by customer, plan, status.`,
+    scopes: ["full", "default", "full"],
     annotations: {
       "title": "",
       "destructiveHint": false,

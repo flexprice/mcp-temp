@@ -15,6 +15,7 @@ export const tool$priceUnitsQueryPriceUnit: ToolDefinition<typeof args> = {
   description: `Query price units
 
 Use when searching or listing price units (e.g. admin catalog). Returns a paginated list; supports filtering and sorting.`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,

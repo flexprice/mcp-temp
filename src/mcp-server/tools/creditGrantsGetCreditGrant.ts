@@ -15,12 +15,13 @@ export const tool$creditGrantsGetCreditGrant: ToolDefinition<typeof args> = {
   description: `Get credit grant
 
 Use when you need to load a single credit grant (e.g. for display or to check balance).`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": true,
+    "readOnlyHint": false,
   },
   args,
   tool: async (client, args, ctx) => {

@@ -15,12 +15,13 @@ export const tool$walletsGetWallet: ToolDefinition<typeof args> = {
   description: `Get wallet
 
 Use when you need to load a single wallet (e.g. for a balance or settings view).`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,
     "idempotentHint": false,
     "openWorldHint": false,
-    "readOnlyHint": true,
+    "readOnlyHint": false,
   },
   args,
   tool: async (client, args, ctx) => {

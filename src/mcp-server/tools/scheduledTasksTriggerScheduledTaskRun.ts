@@ -17,6 +17,7 @@ export const tool$scheduledTasksTriggerScheduledTaskRun: ToolDefinition<
   description: `Trigger force run
 
 Use when you need to run a scheduled export immediately (e.g. on-demand report or catch-up). Supports optional custom time range.`,
+  scopes: ["full"],
   annotations: {
     "title": "",
     "destructiveHint": false,
