@@ -56,7 +56,7 @@ export function createMCPServer(deps: {
 }) {
   const server = new McpServer({
     name: "Flexprice",
-    version: "0.0.46",
+    version: "0.0.47",
   });
 
   const getClient = deps.getSDK || (() =>
