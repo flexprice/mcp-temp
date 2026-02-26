@@ -1,11 +1,11 @@
 {
-  "name": "@omkar273/mcp-server-temp",
-  "version": "0.0.36",
+  "name": "@flexprice/mcp-server-temp",
+  "version": "0.0.35",
   "author": "flexprice",
   "type": "module",
   "sideEffects": false,
   "bin": {
-    "@omkar273/mcp-server-temp": "bin/mcp-server.js",
+    "@flexprice/mcp-server-temp": "bin/mcp-server.js",
     "mcp": "bin/mcp-server.js"
   },
   "scripts": {
