@@ -4,9 +4,9 @@
   },
   "description": "",
   "displayName": "Flexprice",
-  "display_name": "@flexprice/mcp Server Temp",
+  "display_name": "@omkar273/mcp Server Temp",
   "keywords": [
-    "@flexprice/mcp",
+    "@omkar273/mcp",
     "server",
     "temp",
     "flexprice",
@@ -15,7 +15,7 @@
   ],
   "long_description": "Flexprice API: Flexprice API provides billing, metering, and subscription management for SaaS and usage-based products. Use it to manage customers, plans, invoices, payments, usage events, and entitlements. Authenticate with an API key in the x-api-key header.",
   "manifest_version": "0.3",
-  "name": "@flexprice/mcp-server-temp",
+  "name": "@omkar273/mcp-server-temp",
   "prompts": [],
   "server": {
       "type": "node",
@@ -47,5 +47,5 @@
         "sensitive": true
       }
     },
-  "version": "0.0.35"
+  "version": "0.0.36"
 }
