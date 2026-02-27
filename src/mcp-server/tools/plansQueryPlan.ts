@@ -3,11 +3,11 @@
  */
 
 import { plansQueryPlan } from "../../funcs/plansQueryPlan.js";
-import { TypesPlanFilter$zodSchema } from "../../models/typesplanfilter.js";
+import { PlanFilter$zodSchema } from "../../models/planfilter.js";
 import { formatResult, ToolDefinition } from "../tools.js";
 
 const args = {
-  request: TypesPlanFilter$zodSchema,
+  request: PlanFilter$zodSchema,
 };
 
 export const tool$plansQueryPlan: ToolDefinition<typeof args> = {

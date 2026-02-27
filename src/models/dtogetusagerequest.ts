@@ -4,18 +4,15 @@
 
 import * as z from "zod";
 import {
-  TypesAggregationType,
-  TypesAggregationType$zodSchema,
-} from "./typesaggregationtype.js";
-import {
-  TypesWindowSize,
-  TypesWindowSize$zodSchema,
-} from "./typeswindowsize.js";
+  AggregationType,
+  AggregationType$zodSchema,
+} from "./aggregationtype.js";
+import { WindowSize, WindowSize$zodSchema } from "./windowsize.js";
 
 export type DtoGetUsageRequest = {
-  aggregation_type: TypesAggregationType;
+  aggregation_type: AggregationType;
   billing_anchor?: string | undefined;
-  bucket_size?: TypesWindowSize | undefined;
+  bucket_size?: WindowSize | undefined;
   customer_id?: string | undefined;
   end_time?: string | undefined;
   event_name: string;
@@ -25,14 +22,14 @@ export type DtoGetUsageRequest = {
   multiplier?: string | undefined;
   property_name?: string | undefined;
   start_time?: string | undefined;
-  window_size?: TypesWindowSize | undefined;
+  window_size?: WindowSize | undefined;
 };
 
 export const DtoGetUsageRequest$zodSchema: z.ZodType<DtoGetUsageRequest> = z
   .object({
-    aggregation_type: TypesAggregationType$zodSchema,
+    aggregation_type: AggregationType$zodSchema,
     billing_anchor: z.string().optional(),
-    bucket_size: TypesWindowSize$zodSchema.optional(),
+    bucket_size: WindowSize$zodSchema.optional(),
     customer_id: z.string().optional(),
     end_time: z.string().optional(),
     event_name: z.string(),
@@ -42,5 +39,5 @@ export const DtoGetUsageRequest$zodSchema: z.ZodType<DtoGetUsageRequest> = z
     multiplier: z.string().optional(),
     property_name: z.string().optional(),
     start_time: z.string().optional(),
-    window_size: TypesWindowSize$zodSchema.optional(),
+    window_size: WindowSize$zodSchema.optional(),
   });

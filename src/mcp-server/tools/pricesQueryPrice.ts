@@ -3,11 +3,11 @@
  */
 
 import { pricesQueryPrice } from "../../funcs/pricesQueryPrice.js";
-import { TypesPriceFilter$zodSchema } from "../../models/typespricefilter.js";
+import { PriceFilter$zodSchema } from "../../models/pricefilter.js";
 import { formatResult, ToolDefinition } from "../tools.js";
 
 const args = {
-  request: TypesPriceFilter$zodSchema,
+  request: PriceFilter$zodSchema,
 };
 
 export const tool$pricesQueryPrice: ToolDefinition<typeof args> = {

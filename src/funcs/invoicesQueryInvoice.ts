@@ -19,9 +19,9 @@ import {
 } from "../models/errors/httpclienterrors.js";
 import { SDKValidationError } from "../models/errors/sdkvalidationerror.js";
 import {
-  TypesInvoiceFilter,
-  TypesInvoiceFilter$zodSchema,
-} from "../models/typesinvoicefilter.js";
+  InvoiceFilter,
+  InvoiceFilter$zodSchema,
+} from "../models/invoicefilter.js";
 import { APICall, APIPromise } from "../types/async.js";
 import { Result } from "../types/fp.js";
 
@@ -33,7 +33,7 @@ import { Result } from "../types/fp.js";
  */
 export function invoicesQueryInvoice(
   client$: FlexpriceCore,
-  request: TypesInvoiceFilter,
+  request: InvoiceFilter,
   options?: RequestOptions,
 ): APIPromise<
   Result<
@@ -56,7 +56,7 @@ export function invoicesQueryInvoice(
 
 async function $do(
   client$: FlexpriceCore,
-  request: TypesInvoiceFilter,
+  request: InvoiceFilter,
   options?: RequestOptions,
 ): Promise<
   [
@@ -75,7 +75,7 @@ async function $do(
 > {
   const parsed$ = safeParse(
     request,
-    (value$) => TypesInvoiceFilter$zodSchema.parse(value$),
+    (value$) => InvoiceFilter$zodSchema.parse(value$),
     "Input validation failed",
   );
   if (!parsed$.ok) {

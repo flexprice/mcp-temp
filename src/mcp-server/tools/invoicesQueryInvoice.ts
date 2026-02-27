@@ -3,11 +3,11 @@
  */
 
 import { invoicesQueryInvoice } from "../../funcs/invoicesQueryInvoice.js";
-import { TypesInvoiceFilter$zodSchema } from "../../models/typesinvoicefilter.js";
+import { InvoiceFilter$zodSchema } from "../../models/invoicefilter.js";
 import { formatResult, ToolDefinition } from "../tools.js";
 
 const args = {
-  request: TypesInvoiceFilter$zodSchema,
+  request: InvoiceFilter$zodSchema,
 };
 
 export const tool$invoicesQueryInvoice: ToolDefinition<typeof args> = {

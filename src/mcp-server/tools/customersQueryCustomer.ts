@@ -3,11 +3,11 @@
  */
 
 import { customersQueryCustomer } from "../../funcs/customersQueryCustomer.js";
-import { TypesCustomerFilter$zodSchema } from "../../models/typescustomerfilter.js";
+import { CustomerFilter$zodSchema } from "../../models/customerfilter.js";
 import { formatResult, ToolDefinition } from "../tools.js";
 
 const args = {
-  request: TypesCustomerFilter$zodSchema,
+  request: CustomerFilter$zodSchema,
 };
 
 export const tool$customersQueryCustomer: ToolDefinition<typeof args> = {

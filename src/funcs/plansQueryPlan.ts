@@ -18,10 +18,7 @@ import {
   UnexpectedClientError,
 } from "../models/errors/httpclienterrors.js";
 import { SDKValidationError } from "../models/errors/sdkvalidationerror.js";
-import {
-  TypesPlanFilter,
-  TypesPlanFilter$zodSchema,
-} from "../models/typesplanfilter.js";
+import { PlanFilter, PlanFilter$zodSchema } from "../models/planfilter.js";
 import { APICall, APIPromise } from "../types/async.js";
 import { Result } from "../types/fp.js";
 
@@ -33,7 +30,7 @@ import { Result } from "../types/fp.js";
  */
 export function plansQueryPlan(
   client$: FlexpriceCore,
-  request: TypesPlanFilter,
+  request: PlanFilter,
   options?: RequestOptions,
 ): APIPromise<
   Result<
@@ -56,7 +53,7 @@ export function plansQueryPlan(
 
 async function $do(
   client$: FlexpriceCore,
-  request: TypesPlanFilter,
+  request: PlanFilter,
   options?: RequestOptions,
 ): Promise<
   [
@@ -75,7 +72,7 @@ async function $do(
 > {
   const parsed$ = safeParse(
     request,
-    (value$) => TypesPlanFilter$zodSchema.parse(value$),
+    (value$) => PlanFilter$zodSchema.parse(value$),
     "Input validation failed",
   );
   if (!parsed$.ok) {

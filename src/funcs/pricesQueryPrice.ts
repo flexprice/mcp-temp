@@ -18,10 +18,7 @@ import {
   UnexpectedClientError,
 } from "../models/errors/httpclienterrors.js";
 import { SDKValidationError } from "../models/errors/sdkvalidationerror.js";
-import {
-  TypesPriceFilter,
-  TypesPriceFilter$zodSchema,
-} from "../models/typespricefilter.js";
+import { PriceFilter, PriceFilter$zodSchema } from "../models/pricefilter.js";
 import { APICall, APIPromise } from "../types/async.js";
 import { Result } from "../types/fp.js";
 
@@ -33,7 +30,7 @@ import { Result } from "../types/fp.js";
  */
 export function pricesQueryPrice(
   client$: FlexpriceCore,
-  request: TypesPriceFilter,
+  request: PriceFilter,
   options?: RequestOptions,
 ): APIPromise<
   Result<
@@ -56,7 +53,7 @@ export function pricesQueryPrice(
 
 async function $do(
   client$: FlexpriceCore,
-  request: TypesPriceFilter,
+  request: PriceFilter,
   options?: RequestOptions,
 ): Promise<
   [
@@ -75,7 +72,7 @@ async function $do(
 > {
   const parsed$ = safeParse(
     request,
-    (value$) => TypesPriceFilter$zodSchema.parse(value$),
+    (value$) => PriceFilter$zodSchema.parse(value$),
     "Input validation failed",
   );
   if (!parsed$.ok) {

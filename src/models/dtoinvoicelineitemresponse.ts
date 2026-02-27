@@ -3,6 +3,7 @@
  */
 
 import * as z from "zod";
+import { CommitmentInfo, CommitmentInfo$zodSchema } from "./commitmentinfo.js";
 import {
   DtoSourceUsageItem,
   DtoSourceUsageItem$zodSchema,
@@ -11,15 +12,11 @@ import {
   DtoUsageBreakdownItem,
   DtoUsageBreakdownItem$zodSchema,
 } from "./dtousagebreakdownitem.js";
-import {
-  TypesCommitmentInfo,
-  TypesCommitmentInfo$zodSchema,
-} from "./typescommitmentinfo.js";
-import { TypesStatus, TypesStatus$zodSchema } from "./typesstatus.js";
+import { Status, Status$zodSchema } from "./status.js";
 
 export type DtoInvoiceLineItemResponse = {
   amount?: string | undefined;
-  commitment_info?: TypesCommitmentInfo | undefined;
+  commitment_info?: CommitmentInfo | undefined;
   created_at?: string | undefined;
   created_by?: string | undefined;
   currency?: string | undefined;
@@ -45,7 +42,7 @@ export type DtoInvoiceLineItemResponse = {
   price_unit_amount?: string | undefined;
   price_unit_id?: string | undefined;
   quantity?: string | undefined;
-  status?: TypesStatus | undefined;
+  status?: Status | undefined;
   subscription_id?: string | undefined;
   tenant_id?: string | undefined;
   updated_at?: string | undefined;
@@ -58,7 +55,7 @@ export const DtoInvoiceLineItemResponse$zodSchema: z.ZodType<
   DtoInvoiceLineItemResponse
 > = z.object({
   amount: z.string().optional(),
-  commitment_info: TypesCommitmentInfo$zodSchema.optional(),
+  commitment_info: CommitmentInfo$zodSchema.optional(),
   created_at: z.string().optional(),
   created_by: z.string().optional(),
   currency: z.string().optional(),
@@ -84,7 +81,7 @@ export const DtoInvoiceLineItemResponse$zodSchema: z.ZodType<
   price_unit_amount: z.string().optional(),
   price_unit_id: z.string().optional(),
   quantity: z.string().optional(),
-  status: TypesStatus$zodSchema.optional(),
+  status: Status$zodSchema.optional(),
   subscription_id: z.string().optional(),
   tenant_id: z.string().optional(),
   updated_at: z.string().optional(),

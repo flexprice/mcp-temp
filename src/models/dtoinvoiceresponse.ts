@@ -23,19 +23,10 @@ import {
   DtoTaxAppliedResponse,
   DtoTaxAppliedResponse$zodSchema,
 } from "./dtotaxappliedresponse.js";
-import {
-  TypesInvoiceStatus,
-  TypesInvoiceStatus$zodSchema,
-} from "./typesinvoicestatus.js";
-import {
-  TypesInvoiceType,
-  TypesInvoiceType$zodSchema,
-} from "./typesinvoicetype.js";
-import {
-  TypesPaymentStatus,
-  TypesPaymentStatus$zodSchema,
-} from "./typespaymentstatus.js";
-import { TypesStatus, TypesStatus$zodSchema } from "./typesstatus.js";
+import { InvoiceStatus, InvoiceStatus$zodSchema } from "./invoicestatus.js";
+import { InvoiceType, InvoiceType$zodSchema } from "./invoicetype.js";
+import { PaymentStatus, PaymentStatus$zodSchema } from "./paymentstatus.js";
+import { Status, Status$zodSchema } from "./status.js";
 
 export type DtoInvoiceResponse = {
   adjustment_amount?: string | undefined;
@@ -59,17 +50,17 @@ export type DtoInvoiceResponse = {
   idempotency_key?: string | undefined;
   invoice_number?: string | undefined;
   invoice_pdf_url?: string | undefined;
-  invoice_status?: TypesInvoiceStatus | undefined;
-  invoice_type?: TypesInvoiceType | undefined;
+  invoice_status?: InvoiceStatus | undefined;
+  invoice_type?: InvoiceType | undefined;
   line_items?: Array<DtoInvoiceLineItemResponse> | undefined;
   metadata?: { [k: string]: string } | undefined;
   overpaid_amount?: string | undefined;
   paid_at?: string | undefined;
-  payment_status?: TypesPaymentStatus | undefined;
+  payment_status?: PaymentStatus | undefined;
   period_end?: string | undefined;
   period_start?: string | undefined;
   refunded_amount?: string | undefined;
-  status?: TypesStatus | undefined;
+  status?: Status | undefined;
   subscription?: DtoSubscriptionResponse | undefined;
   subscription_id?: string | undefined;
   subtotal?: string | undefined;
@@ -109,17 +100,17 @@ export const DtoInvoiceResponse$zodSchema: z.ZodType<DtoInvoiceResponse> = z
     idempotency_key: z.string().optional(),
     invoice_number: z.string().optional(),
     invoice_pdf_url: z.string().optional(),
-    invoice_status: TypesInvoiceStatus$zodSchema.optional(),
-    invoice_type: TypesInvoiceType$zodSchema.optional(),
+    invoice_status: InvoiceStatus$zodSchema.optional(),
+    invoice_type: InvoiceType$zodSchema.optional(),
     line_items: z.array(DtoInvoiceLineItemResponse$zodSchema).optional(),
     metadata: z.record(z.string(), z.string()).optional(),
     overpaid_amount: z.string().optional(),
     paid_at: z.string().optional(),
-    payment_status: TypesPaymentStatus$zodSchema.optional(),
+    payment_status: PaymentStatus$zodSchema.optional(),
     period_end: z.string().optional(),
     period_start: z.string().optional(),
     refunded_amount: z.string().optional(),
-    status: TypesStatus$zodSchema.optional(),
+    status: Status$zodSchema.optional(),
     subscription: z.lazy(() => DtoSubscriptionResponse$zodSchema).optional(),
     subscription_id: z.string().optional(),
     subtotal: z.string().optional(),

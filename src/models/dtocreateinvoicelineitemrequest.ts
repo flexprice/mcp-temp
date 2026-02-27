@@ -3,14 +3,11 @@
  */
 
 import * as z from "zod";
-import {
-  TypesCommitmentInfo,
-  TypesCommitmentInfo$zodSchema,
-} from "./typescommitmentinfo.js";
+import { CommitmentInfo, CommitmentInfo$zodSchema } from "./commitmentinfo.js";
 
 export type DtoCreateInvoiceLineItemRequest = {
   amount: string;
-  commitment_info?: TypesCommitmentInfo | undefined;
+  commitment_info?: CommitmentInfo | undefined;
   display_name?: string | undefined;
   entity_id?: string | undefined;
   entity_type?: string | undefined;
@@ -35,7 +32,7 @@ export const DtoCreateInvoiceLineItemRequest$zodSchema: z.ZodType<
   DtoCreateInvoiceLineItemRequest
 > = z.object({
   amount: z.string(),
-  commitment_info: TypesCommitmentInfo$zodSchema.optional(),
+  commitment_info: CommitmentInfo$zodSchema.optional(),
   display_name: z.string().optional(),
   entity_id: z.string().optional(),
   entity_type: z.string().optional(),

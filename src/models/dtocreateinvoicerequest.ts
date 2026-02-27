@@ -24,27 +24,18 @@ import {
   DtoTaxRateResponse$zodSchema,
 } from "./dtotaxrateresponse.js";
 import {
-  TypesInvoiceBillingReason,
-  TypesInvoiceBillingReason$zodSchema,
-} from "./typesinvoicebillingreason.js";
-import {
-  TypesInvoiceStatus,
-  TypesInvoiceStatus$zodSchema,
-} from "./typesinvoicestatus.js";
-import {
-  TypesInvoiceType,
-  TypesInvoiceType$zodSchema,
-} from "./typesinvoicetype.js";
-import {
-  TypesPaymentStatus,
-  TypesPaymentStatus$zodSchema,
-} from "./typespaymentstatus.js";
+  InvoiceBillingReason,
+  InvoiceBillingReason$zodSchema,
+} from "./invoicebillingreason.js";
+import { InvoiceStatus, InvoiceStatus$zodSchema } from "./invoicestatus.js";
+import { InvoiceType, InvoiceType$zodSchema } from "./invoicetype.js";
+import { PaymentStatus, PaymentStatus$zodSchema } from "./paymentstatus.js";
 
 export type DtoCreateInvoiceRequest = {
   amount_due: string;
   amount_paid?: string | undefined;
   billing_period?: string | undefined;
-  billing_reason?: TypesInvoiceBillingReason | undefined;
+  billing_reason?: InvoiceBillingReason | undefined;
   coupons?: Array<string> | undefined;
   currency: string;
   customer_id: string;
@@ -54,12 +45,12 @@ export type DtoCreateInvoiceRequest = {
   invoice_coupons?: Array<DtoInvoiceCoupon> | undefined;
   invoice_number?: string | undefined;
   invoice_pdf_url?: string | undefined;
-  invoice_status?: TypesInvoiceStatus | undefined;
-  invoice_type?: TypesInvoiceType | undefined;
+  invoice_status?: InvoiceStatus | undefined;
+  invoice_type?: InvoiceType | undefined;
   line_item_coupons?: Array<DtoInvoiceLineItemCoupon> | undefined;
   line_items?: Array<DtoCreateInvoiceLineItemRequest> | undefined;
   metadata?: { [k: string]: string } | undefined;
-  payment_status?: TypesPaymentStatus | undefined;
+  payment_status?: PaymentStatus | undefined;
   period_end?: string | undefined;
   period_start?: string | undefined;
   prepared_tax_rates?: Array<DtoTaxRateResponse> | undefined;
@@ -77,7 +68,7 @@ export const DtoCreateInvoiceRequest$zodSchema: z.ZodType<
   amount_due: z.string(),
   amount_paid: z.string().optional(),
   billing_period: z.string().optional(),
-  billing_reason: TypesInvoiceBillingReason$zodSchema.optional(),
+  billing_reason: InvoiceBillingReason$zodSchema.optional(),
   coupons: z.array(z.string()).optional(),
   currency: z.string(),
   customer_id: z.string(),
@@ -87,12 +78,12 @@ export const DtoCreateInvoiceRequest$zodSchema: z.ZodType<
   invoice_coupons: z.array(DtoInvoiceCoupon$zodSchema).optional(),
   invoice_number: z.string().optional(),
   invoice_pdf_url: z.string().optional(),
-  invoice_status: TypesInvoiceStatus$zodSchema.optional(),
-  invoice_type: TypesInvoiceType$zodSchema.optional(),
+  invoice_status: InvoiceStatus$zodSchema.optional(),
+  invoice_type: InvoiceType$zodSchema.optional(),
   line_item_coupons: z.array(DtoInvoiceLineItemCoupon$zodSchema).optional(),
   line_items: z.array(DtoCreateInvoiceLineItemRequest$zodSchema).optional(),
   metadata: z.record(z.string(), z.string()).optional(),
-  payment_status: TypesPaymentStatus$zodSchema.optional(),
+  payment_status: PaymentStatus$zodSchema.optional(),
   period_end: z.string().optional(),
   period_start: z.string().optional(),
   prepared_tax_rates: z.array(DtoTaxRateResponse$zodSchema).optional(),

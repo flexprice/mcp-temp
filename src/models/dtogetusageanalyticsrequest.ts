@@ -3,10 +3,7 @@
  */
 
 import * as z from "zod";
-import {
-  TypesWindowSize,
-  TypesWindowSize$zodSchema,
-} from "./typeswindowsize.js";
+import { WindowSize, WindowSize$zodSchema } from "./windowsize.js";
 
 export type DtoGetUsageAnalyticsRequest = {
   end_time?: string | undefined;
@@ -17,7 +14,7 @@ export type DtoGetUsageAnalyticsRequest = {
   property_filters?: { [k: string]: Array<string> } | undefined;
   sources?: Array<string> | undefined;
   start_time?: string | undefined;
-  window_size?: TypesWindowSize | undefined;
+  window_size?: WindowSize | undefined;
 };
 
 export const DtoGetUsageAnalyticsRequest$zodSchema: z.ZodType<
@@ -31,5 +28,5 @@ export const DtoGetUsageAnalyticsRequest$zodSchema: z.ZodType<
   property_filters: z.record(z.string(), z.array(z.string())).optional(),
   sources: z.array(z.string()).optional(),
   start_time: z.string().optional(),
-  window_size: TypesWindowSize$zodSchema.optional(),
+  window_size: WindowSize$zodSchema.optional(),
 });
