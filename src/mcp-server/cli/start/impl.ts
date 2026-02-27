@@ -93,7 +93,7 @@ async function startSSE(cliFlags: StartCommandFlags) {
     const flags: StartCommandFlags = {
       ...cliFlags,
       // Security fields can be overridden via headers
-      "api-key-auth": (req.headers["ApiKeyAuth"] as string)
+      "api-key-auth": (req.headers["apikeyauth"] as string)
         ?? cliFlags["api-key-auth"],
     };
 
